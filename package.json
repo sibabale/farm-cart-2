@@ -1,0 +1,18 @@
+{
+  "name": "farm-cart",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm run server & npm run client",
+    "server": "npm run dev --prefix server",
+    "client": "npm run start --prefix client",
+    "install": "npm run install-client && npm run install-server",
+    "install-client": "yarn install --prefix client",
+    "install-server": "yarn install --prefix server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Sibabale Joja <sibabalejoja@gmail.com>",
+  "license": "MIT"
+}

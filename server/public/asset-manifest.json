@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.cb72107f.css",
+    "main.js": "/static/js/main.008f0867.js",
+    "static/js/787.83a07675.chunk.js": "/static/js/787.83a07675.chunk.js",
+    "static/media/seeds.jpeg": "/static/media/seeds.6c0e94196a03b2d8cab8.jpeg",
+    "static/media/bonsmara-lead.png": "/static/media/bonsmara-lead.48a739e894ab6d8fe7b9.png",
+    "static/media/user.png": "/static/media/user.61637315e740810e35de.png",
+    "index.html": "/index.html",
+    "static/media/menu.svg": "/static/media/menu.dd72dba69cce1d9d536e6bb9788dae09.svg",
+    "main.cb72107f.css.map": "/static/css/main.cb72107f.css.map",
+    "main.008f0867.js.map": "/static/js/main.008f0867.js.map",
+    "787.83a07675.chunk.js.map": "/static/js/787.83a07675.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cb72107f.css",
+    "static/js/main.008f0867.js"
+  ]
+}
