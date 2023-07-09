@@ -1,7 +1,13 @@
+import { useDispatch } from 'react-redux';
 import { useState } from 'react';
-import useCategories from '../useCategories';
+import {
+  updateProductInfo
+} from '../../redux/products/product.slice';
 
 const  useStepOne = () => {
+
+  const dispatch = useDispatch();
+
   const [formData, setFormData] = useState({
     "owner": {
       "uid": "121212121232",
@@ -30,53 +36,31 @@ const  useStepOne = () => {
     "street_address": "",
 });
 
-  const {setSubCategory, setMainCategory} = useCategories()
+
+  const uploadImages = (value: string[]) => {     
+    dispatch(updateProductInfo({name: 'images', value}))
+  };  
 
   const handleFormChange = (event: any) => {
     const {name, value} = event.target;    
-    setFormData(prevState => ({
-      ...prevState,
-      [name]: value
-    }));
-    console.log(formData);
+    dispatch(updateProductInfo({name, value}));
   };
 
   const handleBreedChange = (value: string) => {    
-    setFormData(prevState => ({
-      ...prevState,
-      breed: value
-    }));
+    dispatch(updateProductInfo({name: 'breed', value}));
   };
 
   const handleStudChange = (value: string) => {        
-    setFormData(prevState => ({
-      ...prevState,
-      stud: value === 'Yes' ? true: false
-    }));
-  };
-
-  const handleMainCategoryChange = (value: string) => {    
-    setMainCategory(value);
-    setFormData(prevState => ({
-      ...prevState,
-      main_category: value
-    }));
+    dispatch(updateProductInfo({name: 'stud', value: value === 'Yes' ? true: false}));
   };
 
   const handleSubCategoryChange = (value: string) => {    
-    setSubCategory(value);
-    setFormData(prevState => ({
-      ...prevState,
-      sub_category: value
-    }));
-  };  
+    dispatch(updateProductInfo({name: 'sub_category', value}))
+  };
 
-  const uploadImages = (value: string[]) => {    
-    setFormData((prevState: any) => ({
-      ...prevState,
-      images: value
-    }));
-  };  
+  const handleMainCategoryChange = (value: string) => {    
+    dispatch(updateProductInfo({name: 'main_category', value}))
+  };
 
   return { 
     formData,

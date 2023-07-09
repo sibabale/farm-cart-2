@@ -6,6 +6,7 @@ import {
   ProgressContainer
 } from './steps.styles';
 
+
 import useSteps from '../../../hooks/listings/useSteps';
 import { Button } from "../../../components/atoms/button/button";
 import ProgressBar from "../../../components/atoms/progress_bar/progress_bar";
@@ -15,7 +16,6 @@ import ListingStepTwo from "../step_two/step_two";
 import ListingStepThree from "../step_three/step_three";
 import ListingStepFour from "../step_four/step_four";
 import useStepOne from "../../../hooks/listings/useStepOne";
-
 
 const IndexPage = () => {
 
@@ -98,6 +98,7 @@ const IndexPage = () => {
       </ProgressContainer>
     </FormsContainer>
   ), [Buttons, step, stepForward])
+
 
   return (
     <PageLayout>

@@ -1,13 +1,20 @@
 import { useState, useEffect } from 'react';
 import SubCategories from '../data/categories/sub_categories.json'
 import Breeds from '../data/breeds/breeds.json';
+import { useSelector } from 'react-redux';
+import {
+  selectSubCategory,
+  selectMainCategory
+} from '../redux/products/product.selector';
 
 const  useCategories = () => {
-  const [subCategory, setSubCategory] = useState('');
+
   const [breedOptions, setbreedOptions] = useState<string[]>([]);
-  const [mainCategory, setMainCategory] = useState('');
   const [subCategoryOptions, setSubCategoryOptions] = useState<string[]>([]);
   
+  const subCategory = useSelector(selectSubCategory);
+  const mainCategory = useSelector(selectMainCategory);
+
   useEffect(() => {
     switch (mainCategory) {
       case "Feed":
@@ -20,8 +27,6 @@ const  useCategories = () => {
         return setSubCategoryOptions(SubCategories.health)   
       case "Animals":
         return setSubCategoryOptions(SubCategories.animals)  
-      // default:
-      //   return []
     }
   }, [mainCategory])
 
@@ -45,9 +50,7 @@ const  useCategories = () => {
     subCategory,
     mainCategory,
     breedOptions, 
-    setSubCategory,
     setbreedOptions,
-    setMainCategory,
     subCategoryOptions,
     setSubCategoryOptions,
   };

@@ -14,40 +14,29 @@ import { Input } from "../../../components/atoms/input/input";
 const ListingStepOne = () => {
 
   const {
-    setFormData,
     handleFormChange,
     handleStudChange,
     handleBreedChange,
+    handleSubCategoryChange,
+    handleMainCategoryChange
   } = useStepOne();
 
   const {
     breedOptions, 
-    setSubCategory,
-    setMainCategory,
     subCategoryOptions 
   } = useCategories();
 
-  const handleMainCategoryChange = (value: string) => {
-    setMainCategory(value);
-    setFormData((prevState: any) => ({
-      ...prevState,
-      main_category: value
-    }));
-  };
-
-  const handleSubCategoryChange = (value: string) => {
-    setSubCategory(value);
-    setFormData((prevState: any) => ({
-      ...prevState,
-      sub_category: value
-    }));
-  };  
 
   return (
       <StepOneContainer>
         <Heading>Which of these best describes your product?</Heading>
         <FormOneContainer>
-          <Input name="title" placeholder="Title" className="title" onChange={handleFormChange} />
+          <Input 
+            name="title" 
+            className="title" 
+            placeholder="Title"
+            onChange={handleFormChange}
+          />
           <Select 
             items={MainCategories} 
             className="itemOne"  
