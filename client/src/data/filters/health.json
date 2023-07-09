@@ -1,0 +1,15 @@
+[
+{
+  "text": "Dosages",
+  "link": "health/grain",
+  "image": "../images/filters/health/medicine-bottle.png"
+},{
+  "text": "Injectables",
+  "link": "health/injectables",
+  "image": "../images/filters/health/syringe.png"
+},{
+  "text": "Vaccines",
+  "link": "health/vaccines",
+  "image": "../images/filters/health/vaccine.png"
+}
+]

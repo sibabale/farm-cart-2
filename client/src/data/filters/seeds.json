@@ -1,0 +1,19 @@
+[
+{
+  "text": "Grasses",
+  "link": "seeds/grasses",
+  "image": "../images/filters/seeds/grass.png"
+},{
+  "text": "Maize",
+  "link": "seeds/maize",
+  "image": "../images/filters/seeds/corn.png"
+},{
+  "text": "Wheat",
+  "link": "seeds/wheat",
+  "image": "../images/filters/seeds/wheat.png"
+},{
+  "text": "sunflower",
+  "link": "seeds/sunflower",
+  "image": "../images/filters/seeds/sunflower.png"
+}
+]

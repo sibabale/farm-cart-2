@@ -1,0 +1,55 @@
+[
+  {
+  "id": 12322323,
+  "breed": "Boran",
+  "live_weight": 50,
+  "seller": {
+    "farm": "Lily Farms",
+    "full_name": "Lily Abrahams",
+    "last_name": "Abrahams",
+    "first_name": "Lily"
+  },
+  "price": 30000,
+  "images": ["https://bit.ly/3ogZTot", "https://bit.ly/41C5Ri9", "https://bit.ly/3or8DIH"],
+  "vet_checked": true
+},{
+  "id": 12322323,
+  "breed": "Boran",
+  "live_weight": 50,
+  "seller": {
+    "farm": "Lily Farms",
+    "full_name": "Lily Abrahams",
+    "last_name": "Abrahams",
+    "first_name": "Lily"
+  },
+  "price": 30000,
+  "images": ["https://bit.ly/3ogZTot", "https://bit.ly/41C5Ri9", "https://bit.ly/3or8DIH"],
+  "vet_checked": true
+},{
+  "id": 12322323,
+  "breed": "Boran",
+  "live_weight": 50,
+  "seller": {
+    "farm": "Lily Farms",
+    "full_name": "Lily Abrahams",
+    "last_name": "Abrahams",
+    "first_name": "Lily"
+  },
+  "price": 30000,
+  "images": ["https://bit.ly/3ogZTot", "https://bit.ly/41C5Ri9", "https://bit.ly/3or8DIH"],
+  "vet_checked": true
+},{
+  "id": 12322323,
+  "breed": "Boran",
+  "live_weight": 50,
+  "seller": {
+    "farm": "Lily Farms",
+    "full_name": "Lily Abrahams",
+    "last_name": "Abrahams",
+    "first_name": "Lily"
+  },
+  "price": 30000,
+  "images": ["https://bit.ly/3ogZTot", "https://bit.ly/41C5Ri9", "https://bit.ly/3or8DIH"],
+  "vet_checked": true
+}
+]

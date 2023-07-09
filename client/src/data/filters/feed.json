@@ -1,0 +1,15 @@
+[
+{
+  "text": "Grain",
+  "link": "feed/grain",
+  "image": "../images/filters/feed/grain.png"
+},{
+  "text": "Grasses",
+  "link": "feed/grasses",
+  "image": "../images/filters/feed/grass.png"
+},{
+  "text": "Supplements",
+  "link": "feed/supplements",
+  "image": "../images/filters/feed/supplements.png"
+}
+]

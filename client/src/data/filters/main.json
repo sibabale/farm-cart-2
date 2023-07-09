@@ -1,0 +1,28 @@
+[
+{
+  "text": "Animals",
+  "link": "/animals",
+  "image": "../images/filters/main/cow.png"
+},{
+  "text": "Feed",
+  "link": "/feed",
+  "image": "../images/filters/main/hay.png"
+},{
+  "text": "Health",
+  "link": "/health",
+  "image": "../images/filters/main/syringe.png"
+},{
+  "text": "Tools",
+  "link": "/tools",
+  "image": "../images/filters/main/rake.png"
+},{
+  "text": "Machinery",
+  "link": "/machinery",
+  "image": "../images/filters/main/plow.png"
+},
+{
+  "text": "Seeds",
+  "link": "/seeds",
+  "image": "../images/filters/main/seed.png"
+}
+]

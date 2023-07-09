@@ -1,0 +1,55 @@
+[
+  {
+  "id": 12322323,
+  "breed": "Charolais",
+  "live_weight": 50,
+  "seller": {
+    "farm": "Lily Farms",
+    "full_name": "Lily Abrahams",
+    "last_name": "Abrahams",
+    "first_name": "Lily"
+  },
+  "price": 30000,
+  "images": ["https://bit.ly/3JeOTQ3", "https://bit.ly/42PPmzg", "https://bit.ly/3CA1vOg"],
+  "vet_checked": true
+},{
+  "id": 12322323,
+  "breed": "Charolais",
+  "live_weight": 50,
+  "seller": {
+    "farm": "Lily Farms",
+    "full_name": "Lily Abrahams",
+    "last_name": "Abrahams",
+    "first_name": "Lily"
+  },
+  "price": 30000,
+  "images": ["https://bit.ly/42PPmzg","https://bit.ly/3JeOTQ3",  "https://bit.ly/3CA1vOg"],
+  "vet_checked": true
+},{
+  "id": 12322323,
+  "breed": "Charolais",
+  "live_weight": 50,
+  "seller": {
+    "farm": "Lily Farms",
+    "full_name": "Lily Abrahams",
+    "last_name": "Abrahams",
+    "first_name": "Lily"
+  },
+  "price": 30000,
+  "images": [ "https://shorturl.at/cirHN", "https://bit.ly/3JeOTQ3", "https://bit.ly/42PPmzg"],
+  "vet_checked": true
+},{
+  "id": 12322323,
+  "breed": "Charolais",
+  "live_weight": 50,
+  "seller": {
+    "farm": "Lily Farms",
+    "full_name": "Lily Abrahams",
+    "last_name": "Abrahams",
+    "first_name": "Lily"
+  },
+  "price": 30000,
+  "images": ["https://tinyurl.com/ypx2bp32", "https://bit.ly/3JeOTQ3", "https://bit.ly/42PPmzg"],
+  "vet_checked": true
+}
+]

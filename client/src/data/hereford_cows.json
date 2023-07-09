@@ -1,0 +1,55 @@
+[
+  {
+  "id": 12322323,
+  "breed": "Hereford",
+  "live_weight": 50,
+  "seller": {
+    "farm": "Lily Farms",
+    "full_name": "Lily Abrahams",
+    "last_name": "Abrahams",
+    "first_name": "Lily"
+  },
+  "price": 30000,
+  "images": ["https://tinyurl.com/2p8f9kyz", "https://tinyurl.com/evc9nptt", "https://bit.ly/3CA1vOg"],
+  "vet_checked": true
+},{
+  "id": 12322323,
+  "breed": "Hereford",
+  "live_weight": 50,
+  "seller": {
+    "farm": "Lily Farms",
+    "full_name": "Lily Abrahams",
+    "last_name": "Abrahams",
+    "first_name": "Lily"
+  },
+  "price": 30000,
+  "images": ["https://tinyurl.com/evc9nptt","https://tinyurl.com/2p8f9kyz",  "https://bit.ly/3CA1vOg"],
+  "vet_checked": true
+},{
+  "id": 12322323,
+  "breed": "Hereford",
+  "live_weight": 50,
+  "seller": {
+    "farm": "Lily Farms",
+    "full_name": "Lily Abrahams",
+    "last_name": "Abrahams",
+    "first_name": "Lily"
+  },
+  "price": 30000,
+  "images": [ "https://tinyurl.com/p6crwrfm", "https://tinyurl.com/2p8f9kyz", "https://tinyurl.com/evc9nptt"],
+  "vet_checked": true
+},{
+  "id": 12322323,
+  "breed": "Hereford",
+  "live_weight": 50,
+  "seller": {
+    "farm": "Lily Farms",
+    "full_name": "Lily Abrahams",
+    "last_name": "Abrahams",
+    "first_name": "Lily"
+  },
+  "price": 30000,
+  "images": ["https://tinyurl.com/bdc4nxh4", "https://tinyurl.com/2p8f9kyz", "https://tinyurl.com/evc9nptt"],
+  "vet_checked": true
+}
+]

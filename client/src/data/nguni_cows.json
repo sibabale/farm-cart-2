@@ -1,0 +1,55 @@
+[
+  {
+  "id": 12322323,
+  "breed": "Nguni",
+  "live_weight": 50,
+  "seller": {
+    "farm": "Lily Farms",
+    "full_name": "Lily Abrahams",
+    "last_name": "Abrahams",
+    "first_name": "Lily"
+  },
+  "price": 30000,
+  "images": ["https://tinyurl.com/43s83thr", "https://tinyurl.com/2p9w25we", "https://bit.ly/3CA1vOg"],
+  "vet_checked": true
+},{
+  "id": 12322323,
+  "breed": "Nguni",
+  "live_weight": 50,
+  "seller": {
+    "farm": "Lily Farms",
+    "full_name": "Lily Abrahams",
+    "last_name": "Abrahams",
+    "first_name": "Lily"
+  },
+  "price": 30000,
+  "images": ["https://tinyurl.com/2p9w25we","https://tinyurl.com/43s83thr",  "https://bit.ly/3CA1vOg"],
+  "vet_checked": true
+},{
+  "id": 12322323,
+  "breed": "Nguni",
+  "live_weight": 50,
+  "seller": {
+    "farm": "Lily Farms",
+    "full_name": "Lily Abrahams",
+    "last_name": "Abrahams",
+    "first_name": "Lily"
+  },
+  "price": 30000,
+  "images": [ "https://tinyurl.com/yrrxs9v8", "https://tinyurl.com/43s83thr", "https://tinyurl.com/2p9w25we"],
+  "vet_checked": true
+},{
+  "id": 12322323,
+  "breed": "Nguni",
+  "live_weight": 50,
+  "seller": {
+    "farm": "Lily Farms",
+    "full_name": "Lily Abrahams",
+    "last_name": "Abrahams",
+    "first_name": "Lily"
+  },
+  "price": 30000,
+  "images": ["https://tinyurl.com/yeysb3j4", "https://tinyurl.com/43s83thr", "https://tinyurl.com/2p9w25we"],
+  "vet_checked": true
+}
+]

@@ -1,0 +1,55 @@
+[
+  {
+  "id": 12322323,
+  "breed": "Bonsmara",
+  "live_weight": 50,
+  "seller": {
+    "farm": "Lily Farms",
+    "full_name": "Lily Abrahams",
+    "last_name": "Abrahams",
+    "first_name": "Lily"
+  },
+  "price": 30000,
+  "images": ["https://bit.ly/3qPQ3eN", "https://bit.ly/3NgKqNY", "https://bit.ly/3CA1vOg"],
+  "vet_checked": true
+},{
+  "id": 12322323,
+  "breed": "Bonsmara",
+  "live_weight": 50,
+  "seller": {
+    "farm": "Lily Farms",
+    "full_name": "Lily Abrahams",
+    "last_name": "Abrahams",
+    "first_name": "Lily"
+  },
+  "price": 30000,
+  "images": ["https://bit.ly/3NgKqNY","https://bit.ly/3qPQ3eN",  "https://bit.ly/3CA1vOg"],
+  "vet_checked": true
+},{
+  "id": 12322323,
+  "breed": "Bonsmara",
+  "live_weight": 50,
+  "seller": {
+    "farm": "Lily Farms",
+    "full_name": "Lily Abrahams",
+    "last_name": "Abrahams",
+    "first_name": "Lily"
+  },
+  "price": 30000,
+  "images": [ "https://bit.ly/3CxlKvJ", "https://bit.ly/3qPQ3eN", "https://bit.ly/3NgKqNY"],
+  "vet_checked": true
+},{
+  "id": 12322323,
+  "breed": "Bonsmara",
+  "live_weight": 50,
+  "seller": {
+    "farm": "Lily Farms",
+    "full_name": "Lily Abrahams",
+    "last_name": "Abrahams",
+    "first_name": "Lily"
+  },
+  "price": 30000,
+  "images": ["https://tinyurl.com/4yemp2cx", "https://bit.ly/3qPQ3eN", "https://bit.ly/3NgKqNY"],
+  "vet_checked": true
+}
+]

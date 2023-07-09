@@ -1,0 +1,36 @@
+{"animals": [
+  "Cow",
+  "Chicken", 
+  "Dog",
+  "Goat",
+  "Sheep",
+  "Horse"
+],
+
+"feed": [
+  "Grain", 
+  "Grass",
+  "Supplements"
+],
+
+"tools": [
+  "Branding Tools", 
+  "Power Tools",
+  "Gardening Tools"
+],
+
+"health": [
+  "Dosages", 
+  "Injectables",
+  "Vaccine"
+],
+
+"seeds": [
+  "Grasses", 
+  "Grain",
+  "Fruit",
+  "Trees",
+  "Vegetables",
+  "Vegetables"
+]
+}

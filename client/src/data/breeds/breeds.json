@@ -1,0 +1,72 @@
+{
+  "cows": [
+    "Afrikaner",
+    "Angus",
+    "Beefmaster",
+    "Bonsmara",
+    "Boran",
+    "Brahman",
+    "Brangus",
+    "Charolias",
+    "Drankensburger",
+    "Droughtmaster",
+    "Hereford",
+    "Jersey",
+    "Limousin",
+    "Nguni",
+    "Simbra",
+    "Simmental",
+    "Sussex",
+    "Wagyu",
+    "Other"
+  ],
+  "dogs":[
+    "Africanis",
+    "Boerboel",
+    "Border Collie",
+    "Bull Terrier",
+    "Dachshund",
+    "German Shepherd",
+    "Golden Retriever",
+    "Jack Russell Terrier",
+    "Labrador Retriever",
+    "Rhodesian Ridgeback",
+    "Rottweiler",
+    "Staffordshire Bull Terrier",
+    "Weimaraner",
+    "Other"
+  ],
+  "sheep": [
+    "Damara",
+    "Dohne Merino",
+    "Domer",
+    "Dorper",
+    "Ille De France",
+    "Lettele",
+    "Meatmaster",
+    "Meat Merino",
+    "Merino",
+    "Suffok",
+    "Persin",
+    "Van Roy",
+    "Other"
+  ],
+  "goats": [
+    "Angora",
+    "Boer Goat",
+    "Kalahari Red",
+    "Nigerian Dwarf",
+    "Savannah Goat",
+    "Other"
+  ],
+  "chicken": [
+    "Australorp",
+    "Boschvelder",
+    "Koekoek",
+    "Lohmann",
+    "Orpington",
+    "Rhode Island Red",
+    "Sussex",
+    "Other"
+  ]
+}
