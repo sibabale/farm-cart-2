@@ -17,6 +17,7 @@ const ListingStepThree = ({children, handleFromSubmition}: FormProps) => {
       <Heading>Which of these best describes your product?</Heading>
       <Textarea 
         name="description" 
+        required
         onChange={handleFormChange}
         maxLength={500}
         placeholder="Description" 
