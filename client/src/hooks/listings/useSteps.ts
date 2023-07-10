@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 const  useStepOne = () => {
-  const [step, setStep] = useState(1)
+  const [step, setStep] = useState(0)
 
   const stepForward = (activeStep: number) => {
     setStep(activeStep)
