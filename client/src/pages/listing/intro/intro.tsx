@@ -1,5 +1,5 @@
 
-import { ListingsContainer } from "./index.styles";
+import { ListingsContainer } from "./intro.styles";
 
 
 import { Button } from "../../../components/atoms/button/button";
