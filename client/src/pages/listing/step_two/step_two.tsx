@@ -1,64 +1,75 @@
-import { useEffect, useState } from 'react';
 
 import { 
   Heading,
   StepTwoContainer,
   ImageUploadersContainer
 } from "./step_two.styles";
-import useStepOne from '../../../hooks/listings/useStepOne';
-import ImageUploader from "../../../components/atoms/image_uploader/image_uploader";
 
-const ListingStepTwo = () => {
-  const { uploadImages }= useStepOne()
-  const [selectedImages, setSelectedImages] = useState<string[]>([]);
+import ImageUploader from "../../../components/atoms/image_uploader/image_uploader";
+import { FormProps } from '../../../types/props/molecules/steps';
+import { uploadImages } from '../../../redux/products/product.slice';
+import { selectProduct } from '../../../redux/products/product.selector';
+import {useAppSelector, useAppDispatch} from "../../../hooks/redux";
+
+const ListingStepTwo = ({children, handleFromSubmition}: FormProps) => {
+  
+  const dispatch = useAppDispatch()
+  const productInfo = useAppSelector(selectProduct);
 
   const handleImageUpload = (event: any) => {    
-    const file = event.target.files[0];
-    setSelectedImages( [...selectedImages, URL.createObjectURL(file)]);
-    // You can also send the file to a serverd using AJAX or fetch API
+    const file = event.target.files[0];    
+    dispatch(uploadImages(URL.createObjectURL(file)))
   };
-
-  useEffect(() => {
-    if (selectedImages.length === 5) {
-      uploadImages(selectedImages)
-    }
-  }, [selectedImages] )
+  
   return (
-      <StepTwoContainer>
-        <Heading>Add your images</Heading>
-        <ImageUploadersContainer>
-          <ImageUploader 
-            id="fileOne" 
-            image={selectedImages[0]} 
-            onChange={handleImageUpload} 
-            className='uploader_one' 
-          />
-          <ImageUploader
-            id="fileTwo" 
-            image={selectedImages[1]} 
-            className='uploader_two'
-            onChange={handleImageUpload} 
-          />
-          <ImageUploader 
-            id="fileThree"
-            image={selectedImages[2]} 
-            className='uploader_three'
-            onChange={handleImageUpload} 
-          />
-          <ImageUploader 
-            id="fileFour"
-            image={selectedImages[3]} 
-            className='uploader_four'
-            onChange={handleImageUpload} 
-          />
-          <ImageUploader 
-            id="fileFive"
-            image={selectedImages[4]} 
-            className='uploader_five'
-            onChange={handleImageUpload} 
-          />
-        </ImageUploadersContainer>
-      </StepTwoContainer>
+    <StepTwoContainer onSubmit={handleFromSubmition}>
+      <Heading>Add your images</Heading>
+      <ImageUploadersContainer>
+        <ImageUploader 
+          id="fileOne"
+          name='imageOne'
+          image={productInfo.images[0]} 
+          required={productInfo.images[0] ? false : true}
+          onChange={handleImageUpload} 
+          className='uploader_one' 
+        />
+        <ImageUploader
+          id="fileTwo"
+          name="imageTwo"
+          image={productInfo.images[1]}  
+          required={productInfo.images[1] ? false : true}
+          className='uploader_two'
+          onChange={handleImageUpload} 
+        />
+        <ImageUploader 
+          id="fileThree"
+          name="imageThree"
+          image={productInfo.images[2]} 
+          required={productInfo.images[2] ? false : true}
+          className='uploader_three'
+          onChange={handleImageUpload} 
+        />
+        <ImageUploader 
+          id="fileFour"
+          name="imageFour"
+          image={productInfo.images[3]} 
+          required={productInfo.images[3] ? false : true}
+          className='uploader_four'
+          onChange={handleImageUpload} 
+        />
+        <ImageUploader 
+          id="fileFive"
+          name="imageFive"
+          image={productInfo.images[4]} 
+          required={productInfo.images[4] ? false : true}
+          className='uploader_five'
+          onChange={handleImageUpload} 
+        />
+      </ImageUploadersContainer>
+      <div className='formForm'>
+        {children}
+      </div>
+    </StepTwoContainer>
   );
 };
 

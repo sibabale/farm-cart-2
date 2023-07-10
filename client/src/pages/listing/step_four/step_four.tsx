@@ -1,45 +1,47 @@
 
 import { 
   Heading,
-  StepOneContainer,
-  FormOneContainer,
+  StepFourContainer,
+  FormFourContainer,
 } from "./step_four.styles";
 
-import useStepOne from '../../../hooks/listings/useStepOne';
 import { Input } from "../../../components/atoms/input/input";
+import useStepOne from '../../../hooks/listings/useStepOne';
+import { FormProps } from '../../../types/props/molecules/steps';
+const ListingStepFour = ({children, handleFromSubmition}: FormProps) => {
 
-const ListingStepFour = () => {
-
-  const {
-    formData,
-    handleFormChange,
-  } = useStepOne();
+  
+  const { handleFormChange } = useStepOne();
 
   return (
-      <StepOneContainer>
+      <StepFourContainer>
         <Heading>Which of these best describes your product?</Heading>
-        <FormOneContainer>
+        <FormFourContainer onSubmit={handleFromSubmition}>
           <Input 
             name="price" 
             type="number"
+            required
             onChange={handleFormChange} 
             className="title" 
             placeholder="Price"
           />
           <Input 
             name="street_address"
+            required
             onChange={handleFormChange} 
             className="itemOne" 
             placeholder="Street Address"
           />
           <Input 
             name="city"
+            required
             onChange={handleFormChange} 
             className="itemTwo" 
             placeholder="City"
           />
           <Input 
             name="province"
+            required
             onChange={handleFormChange} 
             className="itemThree" 
             placeholder="Province"
@@ -47,12 +49,16 @@ const ListingStepFour = () => {
           <Input 
             type="number"
             name="zip_code"
+            required
             onChange={handleFormChange} 
             className="itemFour" 
             placeholder="Zip Code"
           />
-        </FormOneContainer>
-      </StepOneContainer>
+          <div className='formFooter'>
+            {children}
+          </div>
+        </FormFourContainer>
+      </StepFourContainer>
   );
 };
 
