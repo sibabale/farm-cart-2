@@ -4,7 +4,7 @@ export const Heading = styled.h1`
   margin-bottom: 50px;
 `;
 
-export const StepTwoContainer = styled.div`
+export const StepTwoContainer = styled.form`
   width: 50vw;
   margin: 0 auto;
 `;

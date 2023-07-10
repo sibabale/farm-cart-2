@@ -4,18 +4,19 @@ export const Heading = styled.h1`
   margin-bottom: 50px;
 `;
 
-export const StepOneContainer = styled.div`
+export const StepFourContainer = styled.div`
   width: 50vw;
   margin: 0 auto;
 `;
 
-export const FormOneContainer = styled.div`
+export const FormFourContainer = styled.form`
   display: grid;
   grid-gap: 50px;
   grid-template-areas: 
     'title title'
     'itemOne itemTwo'
     'itemThree itemFour'
+    'footer footer'
   ;
   .title {
     width: 40%;
@@ -36,6 +37,10 @@ export const FormOneContainer = styled.div`
 
   .itemFour {
     grid-area: itemFour;
+  }
+  
+  .formFooter {
+    grid-area: footer;
   }
   
 `;

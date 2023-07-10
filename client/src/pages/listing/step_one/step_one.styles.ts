@@ -9,7 +9,7 @@ export const StepOneContainer = styled.div`
   margin: 0 auto;
 `;
 
-export const FormOneContainer = styled.div`
+export const FormOneContainer = styled.form`
   display: grid;
   grid-gap: 50px;
   grid-template-areas: 
@@ -17,6 +17,7 @@ export const FormOneContainer = styled.div`
     'itemOne itemTwo'
     'itemThree itemFour'
     'itemFive itemSix'
+    'footer footer'
   ;
   .title {
     grid-area: title;
@@ -46,4 +47,7 @@ export const FormOneContainer = styled.div`
     grid-area: itemSix;
   }
   
+  .formFooter {
+    grid-area: footer;
+  }
 `;
