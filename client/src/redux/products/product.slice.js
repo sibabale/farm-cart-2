@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 import InitProductState from '../init_state/product.json';
 
-export const counterSlice = createSlice({
+export const newProductSlice = createSlice({
   name: 'new_product',
   initialState: {
     ...InitProductState
@@ -11,14 +11,16 @@ export const counterSlice = createSlice({
       const {name,value} = action.payload;
       state[name] = value
     },
+    uploadImages: (state, action) => {
+      console.log("Images", action.payload);
+      state.images = [...state.images, action.payload]
+    },
   },
 })
 
 export const { 
-  increment, 
-  decrement, 
-  incrementByAmount,
+  uploadImages,
   updateProductInfo
-} = counterSlice.actions;
+} = newProductSlice.actions;
 
-export default counterSlice.reducer
+export default newProductSlice.reducer
