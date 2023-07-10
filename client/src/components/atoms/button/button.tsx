@@ -9,6 +9,7 @@ export const Button = ({
   icon, 
   size, 
   text, 
+  type,
   color, 
   isRound, 
   iconAlt, 
@@ -22,6 +23,7 @@ export const Button = ({
     <ButtonContainer 
       $bg={bg}
       $size={size}
+      type={type}
       $color={color}
       onClick={onClick}
       $isRound={isRound}
