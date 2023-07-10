@@ -1,5 +1,4 @@
 import { useDispatch } from 'react-redux';
-import { useState } from 'react';
 import {
   updateProductInfo
 } from '../../redux/products/product.slice';
@@ -7,35 +6,6 @@ import {
 const  useStepOne = () => {
 
   const dispatch = useDispatch();
-
-  const [formData, setFormData] = useState({
-    "owner": {
-      "uid": "121212121232",
-      "verified": false,
-      "personal_information": {
-        "image": "https://bit.ly/41C5Ri9",
-        "email": "jd@email.com",
-        "last_name": "Doe",
-        "first_name": "John",
-        "cell_number": 27813170529
-      },
-    },
-    "city": "",
-    "stud": false,
-    "breed": '',
-    "price": 0,
-    "title": '',
-    "images": [],
-    "weight": 0,
-    "province": "",
-    "zip_code": 0,
-    "quantity": 0,
-    "description": "",
-    "sub_category": '',
-    "main_category": '',
-    "street_address": "",
-});
-
 
   const uploadImages = (value: string[]) => {     
     dispatch(updateProductInfo({name: 'images', value}))
@@ -63,8 +33,6 @@ const  useStepOne = () => {
   };
 
   return { 
-    formData,
-    setFormData,
     uploadImages,
     handleFormChange,
     handleStudChange,
