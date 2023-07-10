@@ -10,7 +10,7 @@ type LabelProps = {
 
 export const Uploader = styled.div<UploaderProps>`
   input {
-    display:none;
+    opacity: 0;
   }
   ${
     ({$bg}) => $bg && `background-image: url(${$bg});` 
