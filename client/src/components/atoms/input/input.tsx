@@ -3,7 +3,7 @@ import { InputContainer } from "./input.styles";
 
 import {InputProps} from '../../../types/props/atoms';
 
-export const Input = ({type = 'text', name, onChange, className, placeholder  }: InputProps) => {
+export const Input = ({type = 'text', name, required =true, onChange, className, placeholder  }: InputProps) => {
 
 
 
@@ -11,6 +11,7 @@ export const Input = ({type = 'text', name, onChange, className, placeholder  }:
     <InputContainer 
         type={type}
         name={name}
+        required={required}
         onChange={onChange}
         className={className}
         placeholder={placeholder}

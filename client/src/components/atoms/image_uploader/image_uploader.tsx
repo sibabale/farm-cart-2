@@ -2,15 +2,22 @@ import {
     Label,
     Uploader,
 } from './image_uploader.styles';
+import {ImageUploaderProps} from '../../../types/props/atoms';
 
 const ImageUploader = (
-    {id, image, className, onChange}:
-    {id: string, image: string, className: string, onChange: (arg:any) => void, }
-  ) => {
+  {id, image, name, required, className, onChange}: ImageUploaderProps
+) => {
 
+  
   return (
       <Uploader className={className} $bg={image}>
-        <input id={id} type="file" onChange={onChange} />
+        <input 
+          id={id} 
+          type="file" 
+          name={name} 
+          onChange={onChange} 
+          required={required} 
+        />
         <Label 
           htmlFor={id}
           $selected={image ? true: false}

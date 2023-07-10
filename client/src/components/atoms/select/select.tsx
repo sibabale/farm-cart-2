@@ -2,7 +2,7 @@
 import {SelectContainer} from './select.styles';
 import {SelectProps} from '../../../types/props/atoms';
 
-export const Select = ({name, items, className, placeholder, onSelectChange}: SelectProps) => {
+export const Select = ({name, items, required, className, placeholder, onSelectChange}: SelectProps) => {
 
   const handleChange = (event: any) => {
     const value = event.target.value;
@@ -12,6 +12,7 @@ export const Select = ({name, items, className, placeholder, onSelectChange}: Se
   return(
     <SelectContainer 
       name={name}
+      required={required}
       onChange={handleChange}
       className={className} 
     >
