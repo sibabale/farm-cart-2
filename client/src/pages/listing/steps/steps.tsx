@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { useCallback } from "react";
 
 import {
@@ -15,7 +16,8 @@ import ListingStepOne from "../step_one/step_one";
 import ListingStepTwo from "../step_two/step_two";
 import ListingStepFour from "../step_four/step_four";
 import ListingStepThree from "../step_three/step_three";
-
+import { selectProduct } from "../../../redux/products/product.selector";
+import { validateLsitForm } from '../../../scripts/validation/listing';
 import { selectActiveStep } from '../../../redux/forms/listing/steps/steps.selector';
 import { stepForward, stepBackward } from '../../../redux/forms/listing/steps/steps.slice';
 import { useAppSelector, useAppDispatch } from '../../../hooks/redux/index'
@@ -24,6 +26,7 @@ const IndexPage = () => {
 
   const dispatch = useAppDispatch()
   const activeStep = useAppSelector(selectActiveStep);
+  const productInfo = useAppSelector(selectProduct);
 
   const FormProgress = useCallback(
     (
@@ -73,8 +76,7 @@ const IndexPage = () => {
             <FormProgress firstStep={0} secondStep={0}  thirdStep={0}/>
             <Buttons hasBack={false} />
           </ListingStepOne>
-        )
-         : activeStep === 2  ? (
+        ) : activeStep === 2  ? (
           <ListingStepTwo handleFromSubmition={() => dispatch(stepForward())}>
             <FormProgress firstStep={100} secondStep={0}  thirdStep={0}/>
             <Buttons hasBack={true} />
@@ -85,7 +87,19 @@ const IndexPage = () => {
             <Buttons hasBack={true} />
           </ListingStepThree>
         ) : activeStep === 4 ? (
-          <ListingStepFour handleFromSubmition={() => dispatch(stepForward())}>
+          <ListingStepFour handleFromSubmition={ async () => {
+            try {
+              if (validateLsitForm(productInfo)) {
+                await axios.post('http://localhost:3333/products', productInfo)
+                alert("Validation passed");
+                return
+              }
+            } catch (error) {
+              alert(`Validation failed: ${error}`, );
+            }
+            
+
+          }}>
             <FormProgress firstStep={100} secondStep={100}  thirdStep={50}/>
             <Buttons hasBack={true} />
           </ListingStepFour>
