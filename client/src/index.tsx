@@ -11,7 +11,6 @@ import './index.css';
 import Home from './pages/index';
 import Animals from './pages/animals/index';
 import FeedPage from './pages/feed';
-import Listing from './pages/listing/intro';
 import Category from './pages/category/index';
 import SeedsPage from './pages/seeds';
 import ToolsPage from './pages/tools';
@@ -46,10 +45,6 @@ const router = createBrowserRouter([
   },
   {
     path: "/listing",
-    element: <Listing />,
-  },
-  {
-    path: "/listing/:id",
     element: <ListingSteps />,
   },
   {
