@@ -1,16 +1,6 @@
 {
-  "owner": {
-    "uid": "121212121232",
-    "verified": false,
-    "personal_information": {
-      "image": "https://bit.ly/41C5Ri9",
-      "email": "jd@email.com",
-      "last_name": "Doe",
-      "first_name": "John",
-      "cell_number": 27813170529
-    }
-  },
   "city": "",
+  "owner": "23233232323232333",
   "stud": false,
   "breed": "",
   "price": 0,
