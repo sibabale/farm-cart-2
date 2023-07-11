@@ -22,7 +22,7 @@ export type InputProps = {
   type?: string, 
   required: boolean, 
   onChange?: (event: any) => void, 
-  className: string, 
+  className?: string, 
   placeholder: string, 
 }
 
