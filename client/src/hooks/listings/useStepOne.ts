@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 import {
   updateProductInfo
-} from '../../redux/products/product.slice';
+} from '../../redux/products//new/product.slice';
 
 const  useStepOne = () => {
 

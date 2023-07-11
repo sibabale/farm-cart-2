@@ -16,7 +16,7 @@ import ListingStepOne from "../step_one/step_one";
 import ListingStepTwo from "../step_two/step_two";
 import ListingStepFour from "../step_four/step_four";
 import ListingStepThree from "../step_three/step_three";
-import { selectProduct } from "../../../redux/products/product.selector";
+import { selectProduct } from "../../../redux/products/new/product.selector";
 import { validateLsitForm } from '../../../scripts/validation/listing';
 import { selectActiveStep } from '../../../redux/forms/listing/steps/steps.selector';
 import { stepForward, stepBackward } from '../../../redux/forms/listing/steps/steps.slice';

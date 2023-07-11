@@ -7,8 +7,8 @@ import {
 
 import ImageUploader from "../../../components/atoms/image_uploader/image_uploader";
 import { FormProps } from '../../../types/props/molecules/steps';
-import { uploadImages } from '../../../redux/products/product.slice';
-import { selectProduct } from '../../../redux/products/product.selector';
+import { uploadImages } from '../../../redux/products/new/product.slice';
+import { selectProduct } from '../../../redux/products/new/product.selector';
 import {useAppSelector, useAppDispatch} from "../../../hooks/redux";
 
 const ListingStepTwo = ({children, handleFromSubmition}: FormProps) => {
