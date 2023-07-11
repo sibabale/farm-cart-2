@@ -10,7 +10,7 @@ type AvatarProps = {
 export const Avatar = ({image, heading, subHeading}: AvatarProps) => {
   return(
     <AvatarContainer $hasHeadings={heading || subHeading ? true: false}>
-      <AvatarImage src={image? image: AvatarPlaceholder} alt="avatar"/>  
+      <AvatarImage $bg={image? image: AvatarPlaceholder} />  
       <div>
         <h3>{heading}</h3>
         <p>{subHeading}</p>

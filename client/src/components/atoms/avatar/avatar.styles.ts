@@ -1,3 +1,4 @@
+import { url } from 'inspector';
 import styled from 'styled-components';
 
 export const AvatarContainer = styled.div<{$hasHeadings: boolean}>`
@@ -9,16 +10,19 @@ export const AvatarContainer = styled.div<{$hasHeadings: boolean}>`
     }
 
   ${({$hasHeadings}) => $hasHeadings ? ` 
-      img {
+      div {
         margin-right: 30px;
       }` : ''
   }
 `
 
-export const AvatarImage = styled.img`
-  width: 30px;
-  height: 30px;
-  padding: 10px;
+export const AvatarImage = styled.div<{$bg: string}>`
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
   border-radius: 100%;
   background-color: #D9D9D9;
+  background-size: cover;
+  background-position: center;
+  background-image: ${({$bg}) => $bg ? `url(${$bg})`: ''};
 `;
