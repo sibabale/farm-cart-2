@@ -8,7 +8,7 @@ const product = {
     "uid": "121212121232",
     "verified": false,
     "personal_information": {
-      "image": "https://bit.ly/41C5Ri9",
+      "image": "https://shorturl.at/cjlG2",
       "email": "jd@email.com",
       "last_name": "Doe",
       "first_name": "John",
@@ -25,7 +25,13 @@ const product = {
   "breed": "Boran",
   "price": 50000,
   "title": "Boran Bull",
-  "images": ["https://bit.ly/41C5Ri9", "https://bit.ly/3or8DIH"],
+  "images": [
+    "https://bit.ly/41C5Ri9", 
+    "https://bit.ly/3or8DIH", 
+    'https://shorturl.at/euwHK',
+    "https://shorturl.at/sUYZ6",
+    "https://shorturl.at/rvO39"
+  ],
   "weight": 200,
   "sold_at": null,
   "created_at": "20 Jan 2023",
