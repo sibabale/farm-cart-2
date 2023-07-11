@@ -14,7 +14,6 @@ export const ProductInformation = styled.div`
 
 
 export const VerificationStatus   = styled.div`
-  width: 650px;
   display: flex;
   align-items: center;
 
@@ -28,17 +27,11 @@ export const VerificationStatus   = styled.div`
 export const SellerDetails   = styled.div`
   display: flex;
   margin-top: 40px;
-  justify-content: center;
-
-  /* div {
-    &:not(:last-child) {
-      margin-right: 100px;
-    }
-  } */
 `;
 
 export const AvatarSection   = styled.div`
-  width: 1230px;
+  width: 650px;
   display: flex;
+  align-items: flex-start;
   justify-content: space-between;
 `;
