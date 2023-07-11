@@ -2,7 +2,8 @@
   {
     "id": 1234423432,
     "breed": "Boran",
-    "Price": 50000,
+    "images": [],
+    "price": 50000,
     "title": "Boran Bull",
     "weight": 200,
     "seller": "Jan van Vyk", 
