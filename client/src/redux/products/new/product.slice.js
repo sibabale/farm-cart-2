@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
-import InitProductState from '../init_state/product.json';
+import InitProductState from '../../init_state/product.json';
 
 export const newProductSlice = createSlice({
   name: 'new_product',
@@ -12,7 +12,6 @@ export const newProductSlice = createSlice({
       state[name] = value
     },
     uploadImages: (state, action) => {
-      console.log("Images", action.payload);
       state.images = [...state.images, action.payload]
     },
   },

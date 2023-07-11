@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 import {
   selectSubCategory,
   selectMainCategory
-} from '../redux/products/product.selector';
+} from '../redux/products/new/product.selector';
 
 const  useCategories = () => {
 
