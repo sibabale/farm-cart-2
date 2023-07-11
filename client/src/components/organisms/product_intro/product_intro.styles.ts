@@ -5,6 +5,7 @@ export const Price = styled.h2`
 `;
 
 export const Lot = styled.p`
+margin: 0;
 `;
 
 export const ProductIntroContent = styled.div`
@@ -19,7 +20,6 @@ export const ProductIntroContent = styled.div`
 
 export const ProductIntroContainer = styled.div`
   display: flex;
-  align-items: center;
   flex-direction: column;
 `;
 

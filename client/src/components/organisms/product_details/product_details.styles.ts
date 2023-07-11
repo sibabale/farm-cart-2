@@ -4,7 +4,6 @@ import styled from 'styled-components';
 export const ProductDetailsContainer = styled.div`
   display: flex;
   padding-top: 24px ;
-  align-items: center;
   flex-direction: column;
 `;
 
