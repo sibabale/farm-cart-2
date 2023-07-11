@@ -13,12 +13,14 @@ import Animals from './pages/animals/index';
 import FeedPage from './pages/feed';
 import Category from './pages/category/index';
 import SeedsPage from './pages/seeds';
+import LoginPage from './pages/auth/login';
 import ToolsPage from './pages/tools';
 import HealthPage from './pages/health';
 import DetailsPage from './pages/details';
 import MachineryPage from './pages/machinery';
 import ListingSteps from './pages/listing/steps/steps';
 import reportWebVitals from './reportWebVitals';
+import RegistrationPage from './pages/auth/register';
 
 import store from './redux/store';
 
@@ -74,6 +76,14 @@ const router = createBrowserRouter([
   {
     path: "/health/:id",
     element: <Category />,
+  },
+  {
+    path: "/auth/login",
+    element: <LoginPage />,
+  },
+  {
+    path: "/auth/register",
+    element: <RegistrationPage />,
   },
   {
     path: "/machinery/:id",
