@@ -7,10 +7,11 @@ type ProductCardLayoutProps = {
   image: string, 
   price: number, 
   title: string, 
+  altText: string, 
   isLoading: boolean
 };
 
-const ProductCard = ({ id, image, price, title, isLoading   }: ProductCardLayoutProps) => {
+const ProductCard = ({ id, image, price, title, altText, isLoading   }: ProductCardLayoutProps) => {
 if (isLoading) {
   return (
     <ContentLoader
@@ -27,7 +28,7 @@ if (isLoading) {
 
   return (
     <ProductCardContainer to={`/${id}`}>
-      <CardImage src={image} alt={image} />
+    <CardImage src={image} alt={altText} />
       <h5>{title}</h5>
       <b>R {price}</b>
     </ProductCardContainer>
