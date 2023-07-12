@@ -1,13 +1,127 @@
 [
   {
     "id": 1234423432,
+    "owner": "23233232323232333",
+    "breed": "Merino",
+    "price": 50000,
+    "title": "Merino Ram",
+    "images": [
+      "https://shorturl.at/dsIO6", 
+      "https://bit.ly/3or8DIH", 
+      "https://shorturl.at/euwHK",
+      "https://shorturl.at/sUYZ6",
+      "https://shorturl.at/rvO39"
+    ],
+    "weight": 200,
+    "sold_at": null,
+    "created_at": "20 Jan 2023",
+    "main_category": "animals",
+    "sub_category": "sheep",
+    "quantity": 3,
+    "description": "Fugiat quis et eu esse reprehenderit pariatur dolore commodo cillum.d"
+  },
+  {
+    "id": 23230404004,
+    "owner": "23233232323232333",
+    "breed": "Suffoc",
+    "price": 50000,
+    "title": "Suffox Ewes",
+    "images": [
+      "https://shorturl.at/eDK07", 
+      "https://bit.ly/3or8DIH", 
+      "https://shorturl.at/euwHK",
+      "https://shorturl.at/sUYZ6",
+      "https://shorturl.at/rvO39"
+    ],
+    "weight": 200,
+    "sold_at": null,
+    "created_at": "20 Jan 2023",
+    "main_category": "animals",
+    "sub_category": "sheep",
+    "quantity": 3,
+    "description": "Fugiat quis et eu esse reprehenderit pariatur dolore commodo cillum.d"
+  },
+  {
+    "id": 99933322323,
+    "owner": "23233232323232333",
+    "breed": "Ille De France",
+    "price": 50000,
+    "title": "Ille De France Lamb",
+    "images": [
+      "https://shorturl.at/BCKX1", 
+      "https://bit.ly/3or8DIH", 
+      "https://shorturl.at/euwHK",
+      "https://shorturl.at/sUYZ6",
+      "https://shorturl.at/rvO39"
+    ],
+    "weight": 200,
+    "sold_at": null,
+    "created_at": "20 Jan 2023",
+    "main_category": "animals",
+    "sub_category": "sheep",
+    "quantity": 3,
+    "description": "Fugiat quis et eu esse reprehenderit pariatur dolore commodo cillum.d"
+  },
+  {
+    "id": 44343200043,
+    "owner": "23233232323232333",
+    "breed": "Dohne Merino",
+    "price": 50000,
+    "title": "Dhone Merino Lamb",
+    "images": [
+      "https://shorturl.at/cxKZ2", 
+      "https://bit.ly/3or8DIH", 
+      "https://shorturl.at/euwHK",
+      "https://shorturl.at/sUYZ6",
+      "https://shorturl.at/rvO39"
+    ],
+    "weight": 200,
+    "sold_at": null,
+    "created_at": "20 Jan 2023",
+    "main_category": "animals",
+    "sub_category": "sheep",
+    "quantity": 3,
+    "description": "Fugiat quis et eu esse reprehenderit pariatur dolore commodo cillum.d"
+  },
+  {
+    "id": 2929293323004,
+    "owner": "23233232323232333",
+    "breed": "Savannah",
+    "price": 50000,
+    "title": "Savannah Doe",
+    "images": [
+      "https://shorturl.at/aefO8", 
+      "https://bit.ly/3or8DIH", 
+      "https://shorturl.at/euwHK",
+      "https://shorturl.at/sUYZ6",
+      "https://shorturl.at/rvO39"
+    ],
+    "weight": 200,
+    "sold_at": null,
+    "created_at": "20 Jan 2023",
+    "main_category": "animals",
+    "sub_category": "goats",
+    "quantity": 3,
+    "description": "Fugiat quis et eu esse reprehenderit pariatur dolore commodo cillum.d"
+  },
+  {
+    "id": 28844000443,
+    "owner": "23233232323232333",
     "breed": "Boran",
-    "images": [],
     "price": 50000,
     "title": "Boran Bull",
+    "images": [
+      "https://bit.ly/41C5Ri9", 
+      "https://bit.ly/3or8DIH", 
+      "https://shorturl.at/euwHK",
+      "https://shorturl.at/sUYZ6",
+      "https://shorturl.at/rvO39"
+    ],
     "weight": 200,
-    "seller": "Jan van Vyk", 
-    "category": "cows",
+    "sold_at": null,
+    "created_at": "20 Jan 2023",
+    "main_category": "animals",
+    "sub_category": "cows",
     "quantity": 3,
     "description": "Fugiat quis et eu esse reprehenderit pariatur dolore commodo cillum.d"
   }
