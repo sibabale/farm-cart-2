@@ -16,7 +16,7 @@ const IndexPage = () => {
 
   useEffect(() => {
     setIsLoading(true)
-    axios.get('http://localhost:3333/products')
+    axios.get('http://localhost:8000/products/animals')
     .then((response: any) => {
       setData(response.data)
     })
@@ -27,17 +27,24 @@ const IndexPage = () => {
     .finally(() => setIsLoading(false))
   }, []);
 
+  const availableAnimals = () => {
+    return data.filter(item => item === item.main_category)
+  }
+
+  console.log(availableAnimals());
+  
   return (
     <PageLayout>
       <Filter items={AnimalFilters} />
       <ProductLayout>
         {data.map((item, index) => (
             <ProductCard
-              id={item.id}
+              id={`${item.main_category}/${item.sub_category}/${item.id}`}
               key={index}
               image={item.images[0]}
-              title="Lorem"
+              title={item.title}
               price={item.price}
+              altText={item.title}
               isLoading={isLoading}
             />
           ))

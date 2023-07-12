@@ -1,25 +1,41 @@
+import axios from "axios";
 import { useParams } from "react-router-dom";
-import "../../styles.global.css";
+import { useState, useEffect } from "react";
 
 import ProductCard from "../../components/organisms/product_card/product_card";
 import { PageLayout } from "../../components/organisms/layouts/page_layout/page_layout";
 import { ProductLayout } from "../../components/organisms/layouts/product_layout/product_layout";
 
-import Sheep from '../../data/sheep.json';
-
 const IndexPage = () => {
   let { id } = useParams();
+  const [data, setData] = useState<any[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setIsLoading(true)
+    axios.get(`http://localhost:8000/products/animals/${id?.toLocaleLowerCase()}`)
+    .then((response: any) => {
+      setData(response.data)
+    })
+    .catch((error: any) => {
+      console.error(error);
+      setIsLoading(false)
+    })
+    .finally(() => setIsLoading(false))
+  }, []);
+
   return (
     <PageLayout>
       <ProductLayout title={`${id?.charAt(0).toUpperCase()}${id?.slice(1)}`  }>
-        {Sheep.map((item, index) => (
+        {data.map((item, index) => (
             <ProductCard
               id={item.id}
               key={index}
               image={item.images[0]}
-              title="Lorem"
+              title={item.title}
               price={item.price}
-              isLoading={true}
+              altText={item.title}
+              isLoading={isLoading}
             />
           ))
         } 

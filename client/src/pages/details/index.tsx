@@ -1,6 +1,7 @@
 import axios from 'axios';
-
+import { useParams } from "react-router-dom";
 import { useEffect, useState } from 'react';
+
 import ImageGrid from '../../components/organisms/image_grid/image_grid';
 import ProductCTA from '../../components/organisms/product_cta/product_cta';
 import ProductIntro from '../../components/organisms/product_intro/product_intro';
@@ -21,14 +22,15 @@ import Avatar from '../../components/atoms/avatar/avatar';
 import { useAppSelector, useAppDispatch } from '../../hooks/redux';
 
 export const DetailsPage = () => {
+  let { id, sub_category, main_category} = useParams();
   
   const dispatch = useAppDispatch();
   const product = useAppSelector(selectedProduct);
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    axios.get('http://localhost:3333/products').then((response) => {
-      dispatch(setSelectedProduct(response.data[0]))
+    axios.get(`http://localhost:8000/products/${main_category}/${sub_category}/${id}`).then((response) => {
+      dispatch(setSelectedProduct(response.data))
       
       setIsLoading(false) 
     }).catch((error) => console.error(error))
@@ -50,13 +52,13 @@ export const DetailsPage = () => {
         <div>
           <ProductIntro 
             name={product.title} 
-            image={product.owner.personal_information.image} 
+            image=""
             price={product.price}
             quantity={product.quantity} 
           />
           <ProductDetails 
             items={[
-              {icon: "../images/filters/animals/cow.png", text: product.breed, heading: "Breed"},
+              {icon: "../images/icons/cow.svg", text: product.breed, heading: "Breed"},
               {icon: "../images/weight.png", text: `${product.weight}kg`, heading: "Weight"},
             ]}
             description={product.description}
@@ -64,8 +66,8 @@ export const DetailsPage = () => {
           <SellerDetails>
             <AvatarSection>
               <Avatar
-                image={product.owner.personal_information.image}
-                heading={`Sold by ${product.owner.personal_information.first_quantity} ${product.owner.personal_information.last_name}`} 
+                image=""
+                heading=''
                 subHeading="Joined in 2 February 2023" />
               <VerificationStatus>
                 <img src='../images/shield.png' alt="Shield Icon" />
