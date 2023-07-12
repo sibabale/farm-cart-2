@@ -22,6 +22,7 @@ const HealthPage = () => {
               image={item.images[0]}
               title="Lorem"
               price={item.price}
+              altText=""
               isLoading={true}
             />
           ))

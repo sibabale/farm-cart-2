@@ -19,8 +19,9 @@ const FeedPage = () => {
               id={item.id}
               key={index}
               image={item.images[0]}
-              title="Lorem"
+              title=""
               price={item.price}
+              altText=""
               isLoading={true}
             />
           ))
