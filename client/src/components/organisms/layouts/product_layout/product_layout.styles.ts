@@ -1,8 +1,13 @@
 import styled from "styled-components";
 
 export const ProductsHeader = styled.div`
+
   display: flex;
   justify-content: space-between;
+
+  h3 {
+    font-weight: bold;
+  }
 `;
 
 export const ProductLayoutContent = styled.div`
@@ -14,7 +19,9 @@ width: 100%;
 export const ProductLayoutContainer = styled.div`
   display: flex;
   margin-top: 10px;
+  margin-bottom: 20px;
 `;
+
 export const ProductsContainer = styled.div`
   gap: 48px;
   display: grid;
