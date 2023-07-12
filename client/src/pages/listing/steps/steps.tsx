@@ -90,7 +90,7 @@ const IndexPage = () => {
           <ListingStepFour handleFromSubmition={ async () => {
             try {
               if (validateLsitForm(productInfo)) {
-                await axios.post('http://localhost:3333/products', productInfo)
+                await axios.post('http://localhost:8000/products', productInfo)
                 alert("Validation passed");
                 return
               }
