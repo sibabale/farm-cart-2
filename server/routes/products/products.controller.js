@@ -1,4 +1,10 @@
-const {getAllProducts, addNewProduct} =  require('../../models/products.model.js')
+const {
+  addNewProduct, 
+  getProductById, 
+  getAllProducts, 
+  getProductsBySubCategory,
+  getProductsByMainCategory
+} =  require('../../models/products.model.js')
 
 function httpAddNewProduct (req, res) {
   const newProduct = req.body;
@@ -11,11 +17,27 @@ function httpAddNewProduct (req, res) {
   
 };
 
+function httpGetProductById (req, res) {
+  return res.status(200).json(getProductById(req.params.id))
+}
+
 function httpGetAllProducts (req, res) {
   return res.status(200).json(getAllProducts())
 }
 
+function httpGetProductsBySubCategory (req, res) {
+  return res.status(200).json(getProductsBySubCategory(req.params.sub_category))
+}
+
+function httpGetProductsByMainCategory (req, res) {
+  console.log(req.params.id);
+  return res.status(200).json(getProductsByMainCategory(req.params.id))
+}
+
 module.exports =  {
-  httpGetAllProducts,
   httpAddNewProduct,
+  httpGetProductById,
+  httpGetAllProducts,
+  httpGetProductsBySubCategory,
+  httpGetProductsByMainCategory
 }
