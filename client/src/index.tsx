@@ -34,7 +34,7 @@ const router = createBrowserRouter([
     element: <FeedPage />,
   },
   {
-    path: "/:id",
+    path: "/:main_category/:sub_category/:id",
     element: <DetailsPage />,
   },
   {
