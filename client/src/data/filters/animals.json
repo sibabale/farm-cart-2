@@ -12,11 +12,11 @@
   "link": "animals/chickens",
   "image": "../images/filters/animals/chicken.png"
 },{
-  "text": "Dog",
+  "text": "Dogs",
   "link": "animals/dogs",
   "image": "../images/filters/animals/dog.png"
 },{
-  "text": "Goat",
+  "text": "Goats",
   "link": "animals/goats",
   "image": "../images/filters/animals/goat.png"
 },{
@@ -26,7 +26,7 @@
 },
 {
   "text": "Sheep",
-  "link": "animals/sheeps",
+  "link": "animals/sheep",
   "image": "../images/filters/animals/sheep.png"
 }
 ]
