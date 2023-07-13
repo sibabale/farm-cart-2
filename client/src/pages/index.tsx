@@ -32,15 +32,14 @@ const IndexPage = () => {
     })
     .finally(() => setIsLoading(false))
   }, []);
-
+  
   useMemo(() => {
-    const availableSheep = data.filter((item) => item.sub_category === 'sheep')
-    const availableGoats = data.filter((item) => item.sub_category === 'goats')
-    const availableBestDeals = data.filter((item) => item.price <= 2000)
-    setGoats(availableGoats)
-    setSheep(availableSheep)
-    setBestDeals(availableBestDeals)
-
+      const availableSheep = data.filter((item) => item.sub_category === 'sheep')
+      const availableGoats = data.filter((item) => item.sub_category === 'goats')
+      const availableBestDeals = data.filter((item) => item.price <= 2000)
+      setGoats(availableGoats)
+      setSheep(availableSheep)
+      setBestDeals(availableBestDeals)
   }, [data])
   
 
@@ -54,7 +53,7 @@ const IndexPage = () => {
             {bestDeals?.map((item, index) => {
               return (
                 <ProductCard
-                  id={`${item.main_category}/${item.sub_category}/${item.id}`}
+                  id={`${item.main_category}/${item.sub_category}/${item._id}`}
                   key={index}
                   image={item.images[0]}
                   title={item.title}
@@ -74,7 +73,7 @@ const IndexPage = () => {
             {sheep?.map((item, index) => {
               return (
                 <ProductCard
-                  id={`${item.main_category}/${item.sub_category}/${item.id}`}
+                  id={`${item.main_category}/${item.sub_category}/${item._id}`}
                   key={index}
                   image={item.images[0]}
                   title={item.title}
@@ -94,7 +93,7 @@ const IndexPage = () => {
             {goats?.map((item, index) => {
               return (
                 <ProductCard
-                  id={`${item.main_category}/${item.sub_category}/${item.id}`}
+                  id={`${item.main_category}/${item.sub_category}/${item._id}`}
                   key={index}
                   image={item.images[0]}
                   title={item.title}
