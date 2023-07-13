@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect,useState} from "react";
+import { useParams} from "react-router-dom";
 import "../../styles.global.css";
 
 import { Filter } from "../../components/organisms/filter/filter";
@@ -9,14 +10,14 @@ import { ProductLayout } from "../../components/organisms/layouts/product_layout
 
 import AnimalFilters  from "../../data/filters/animals.json";
 
-const IndexPage = () => {
-
+const MainCategoryPage = () => {
+  const {main_category} = useParams();
   const [data, setData] = useState<any[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     setIsLoading(true)
-    axios.get('http://localhost:8000/products/animals')
+    axios.get(`http://localhost:8000/products/${main_category}`)
     .then((response: any) => {
       setData(response.data)
     })
@@ -25,7 +26,7 @@ const IndexPage = () => {
       setIsLoading(false)
     })
     .finally(() => setIsLoading(false))
-  }, []);
+  }, [main_category]);
 
   return (
     <PageLayout>
@@ -48,4 +49,4 @@ const IndexPage = () => {
   );
 };
 
-export default IndexPage;
+export default MainCategoryPage;

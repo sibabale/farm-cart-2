@@ -6,14 +6,14 @@ import ProductCard from "../../components/organisms/product_card/product_card";
 import { PageLayout } from "../../components/organisms/layouts/page_layout/page_layout";
 import { ProductLayout } from "../../components/organisms/layouts/product_layout/product_layout";
 
-const IndexPage = () => {
-  let { id } = useParams();
+const MainCategoryPage = () => {
+  let { sub_category, main_category } = useParams();
   const [data, setData] = useState<any[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     setIsLoading(true)
-    axios.get(`http://localhost:8000/products/animals/${id?.toLocaleLowerCase()}`)
+    axios.get(`http://localhost:8000/products/${main_category}/${sub_category?.toLocaleLowerCase()}`)
     .then((response: any) => {
       setData(response.data)
     })
@@ -22,11 +22,11 @@ const IndexPage = () => {
       setIsLoading(false)
     })
     .finally(() => setIsLoading(false))
-  }, []);
+  }, [main_category, sub_category]);
 
   return (
     <PageLayout>
-      <ProductLayout title={`${id?.charAt(0).toUpperCase()}${id?.slice(1)}`  }>
+      <ProductLayout title={`${sub_category?.charAt(0).toUpperCase()}${sub_category?.slice(1)}`  }>
         {data.map((item, index) => (
             <ProductCard
               id={item._id}
@@ -44,4 +44,4 @@ const IndexPage = () => {
   );
 };
 
-export default IndexPage;
+export default MainCategoryPage;

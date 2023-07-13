@@ -9,12 +9,12 @@ import { Provider } from 'react-redux';
 import './index.css';
 
 import Home from './pages/index';
-import Animals from './pages/animals/index';
-import Category from './pages/category/index';
 import LoginPage from './pages/auth/login';
 import DetailsPage from './pages/details';
 import ListingSteps from './pages/listing/steps/steps';
 import reportWebVitals from './reportWebVitals';
+import SubCategoryPage from './pages/sub_category/index';
+import MainCategoryPage from './pages/main_category/index';
 import RegistrationPage from './pages/auth/register';
 
 import store from './redux/store';
@@ -34,8 +34,8 @@ const router = createBrowserRouter([
     element: <ListingSteps />,
   },
   {
-    path: "/animals",
-    element: <Animals />,
+    path: "/:main_category",
+    element: <MainCategoryPage />,
   },
   {
     path: "/auth/login",
@@ -46,8 +46,8 @@ const router = createBrowserRouter([
     element: <RegistrationPage />,
   },
   {
-    path: "/animals/:id",
-    element: <Category />,
+    path: "/:main_category/:sub_category",
+    element: <SubCategoryPage />,
   },
 ]);
 
