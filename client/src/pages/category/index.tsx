@@ -29,7 +29,7 @@ const IndexPage = () => {
       <ProductLayout title={`${id?.charAt(0).toUpperCase()}${id?.slice(1)}`  }>
         {data.map((item, index) => (
             <ProductCard
-              id={item.id}
+              id={item._id}
               key={index}
               image={item.images[0]}
               title={item.title}

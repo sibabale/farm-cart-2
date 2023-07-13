@@ -27,19 +27,13 @@ const IndexPage = () => {
     .finally(() => setIsLoading(false))
   }, []);
 
-  const availableAnimals = () => {
-    return data.filter(item => item === item.main_category)
-  }
-
-  console.log(availableAnimals());
-  
   return (
     <PageLayout>
       <Filter items={AnimalFilters} />
       <ProductLayout>
         {data.map((item, index) => (
             <ProductCard
-              id={`${item.main_category}/${item.sub_category}/${item.id}`}
+              id={`${item.main_category}/${item.sub_category}/${item._id}`}
               key={index}
               image={item.images[0]}
               title={item.title}

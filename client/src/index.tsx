@@ -10,14 +10,9 @@ import './index.css';
 
 import Home from './pages/index';
 import Animals from './pages/animals/index';
-import FeedPage from './pages/feed';
 import Category from './pages/category/index';
-import SeedsPage from './pages/seeds';
 import LoginPage from './pages/auth/login';
-import ToolsPage from './pages/tools';
-import HealthPage from './pages/health';
 import DetailsPage from './pages/details';
-import MachineryPage from './pages/machinery';
 import ListingSteps from './pages/listing/steps/steps';
 import reportWebVitals from './reportWebVitals';
 import RegistrationPage from './pages/auth/register';
@@ -29,53 +24,18 @@ const router = createBrowserRouter([
     path: "/",
     element: <Home />,
   },
-  {
-    path: "/feed",
-    element: <FeedPage />,
-  },
+
   {
     path: "/:main_category/:sub_category/:id",
     element: <DetailsPage />,
-  },
-  {
-    path: "/tools",
-    element: <ToolsPage />,
-  },
-  {
-    path: "/seeds",
-    element: <SeedsPage />,
   },
   {
     path: "/listing",
     element: <ListingSteps />,
   },
   {
-    path: "/health",
-    element: <HealthPage />,
-  },
-  {
-    path: "/machinery",
-    element: <MachineryPage />,
-  },
-  {
     path: "/animals",
     element: <Animals />,
-  },
-  {
-    path: "/feed/:id",
-    element: <Category />,
-  },
-  {
-    path: "/tools/:id",
-    element: <Category />,
-  },
-  {
-    path: "/seeds/:id",
-    element: <Category />,
-  },
-  {
-    path: "/health/:id",
-    element: <Category />,
   },
   {
     path: "/auth/login",
@@ -84,10 +44,6 @@ const router = createBrowserRouter([
   {
     path: "/auth/register",
     element: <RegistrationPage />,
-  },
-  {
-    path: "/machinery/:id",
-    element: <Category />,
   },
   {
     path: "/animals/:id",
