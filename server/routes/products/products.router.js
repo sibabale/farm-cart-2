@@ -14,6 +14,6 @@ productsRouter.get('/', httpGetAllProducts)
 productsRouter.post('/', httpAddNewProduct)
 productsRouter.get('/:main_category/:sub_category/:id', httpGetProductById)
 productsRouter.get('/:main_category/:sub_category', httpGetProductsBySubCategory)
-productsRouter.get('/:id', httpGetProductsByMainCategory)
+productsRouter.get('/:main_category', httpGetProductsByMainCategory)
 
 module.exports = productsRouter;

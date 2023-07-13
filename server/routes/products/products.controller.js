@@ -4,34 +4,33 @@ const {
   getAllProducts, 
   getProductsBySubCategory,
   getProductsByMainCategory
-} =  require('../../models/products.model.js')
+} =  require('../../models/products/products.model.js')
 
-function httpAddNewProduct (req, res) {
-  const newProduct = req.body;
+async function httpAddNewProduct (req, res) {
 
-  newProduct.created_at = new Date(newProduct.created_at);
-
-  addNewProduct(newProduct);
-
+  const newProduct  = await addNewProduct( req.body);
   return res.status(201).json(newProduct)
   
 };
 
-function httpGetProductById (req, res) {
-  return res.status(200).json(getProductById(req.params.id))
+async function httpGetProductById (req, res) {
+  const product = await getProductById(req.params.id)
+  return res.status(200).json(product)
 }
 
-function httpGetAllProducts (req, res) {
-  return res.status(200).json(getAllProducts())
+async function httpGetAllProducts (req, res) {
+  const products = await getAllProducts();
+  return res.status(200).json(products);
 }
 
-function httpGetProductsBySubCategory (req, res) {
-  return res.status(200).json(getProductsBySubCategory(req.params.sub_category))
+async function httpGetProductsBySubCategory (req, res) {
+  const productsBySubCategory = await getProductsBySubCategory(req.params.sub_category)
+  return res.status(200).json(productsBySubCategory)
 }
 
-function httpGetProductsByMainCategory (req, res) {
-  console.log(req.params.id);
-  return res.status(200).json(getProductsByMainCategory(req.params.id))
+async function httpGetProductsByMainCategory (req, res) {
+  const productsByMainCategory = await getProductsByMainCategory(req.params.main_category)
+  return res.status(200).json(productsByMainCategory)
 }
 
 module.exports =  {
