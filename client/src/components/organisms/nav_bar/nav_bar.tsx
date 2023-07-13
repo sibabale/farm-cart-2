@@ -40,9 +40,14 @@ export const NavBar = ({}) => {
           <Link to="/">farm cart</Link>
         </NavTitle>
         <Menu src={MenuImage} alt="Menu" />
-
         <ProfileCart>
-          <Button as="link" to="/listing" text="List a product" />
+          <Button 
+            as="link" to="/listing" 
+            bg="black"
+            text="List a product" 
+            color="white" 
+            isRound 
+          />
           <Avatar />
         </ProfileCart>
       </NavBarItems>
