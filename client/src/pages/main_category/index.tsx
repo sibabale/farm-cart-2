@@ -1,7 +1,6 @@
 import axios from "axios";
 import { useEffect,useState} from "react";
 import { useParams} from "react-router-dom";
-import "../../styles.global.css";
 
 import { Filter } from "../../components/organisms/filter/filter";
 import ProductCard from "../../components/organisms/product_card/product_card";

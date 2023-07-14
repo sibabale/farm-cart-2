@@ -6,7 +6,7 @@ import ProductCard from "../../components/organisms/product_card/product_card";
 import { PageLayout } from "../../components/organisms/layouts/page_layout/page_layout";
 import { ProductLayout } from "../../components/organisms/layouts/product_layout/product_layout";
 
-const MainCategoryPage = () => {
+const SubCategoryPage = () => {
   let { sub_category, main_category } = useParams();
   const [data, setData] = useState<any[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -44,4 +44,4 @@ const MainCategoryPage = () => {
   );
 };
 
-export default MainCategoryPage;
+export default SubCategoryPage;

@@ -29,7 +29,7 @@ export const Grid = styled.div`
 
   @media screen and (min-width: 1140px) {
     grid-template-rows: 250px 250px;
-    grid-template-columns: 300px 300px 300px 300px;
+    grid-template-columns: 330px 330px 330px 330px;
   }
 
   @media screen and (max-width: 1024px) {
