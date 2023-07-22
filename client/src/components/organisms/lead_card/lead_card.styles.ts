@@ -15,6 +15,7 @@ export const LeadCardContainer = styled.div<{$image: string}>`
   background-size: cover;
   background-image: ${({$image}) => $image &&  `url(${$image})` };
   background-repeat: no-repeat;
+  background-position: center;
 
   
   @media screen and (max-width: 768px) {

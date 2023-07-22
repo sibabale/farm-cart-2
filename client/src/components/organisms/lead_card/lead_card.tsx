@@ -11,7 +11,15 @@ export const LeadCard = ({ image, text }: LeadCardProps ) => (
   <LeadCardContainer $image={image} >
     <LeadCardContent>
       <LeadCardText>{text}</LeadCardText>
-      <Button text="Shop Now" color="white" isRound borderColor="white"/>
+      <Button 
+        as="link"
+        to="/animals/goats"
+        bg="rgba(255, 255, 255, 0.52)" 
+        text="Shop Now" 
+        color="white"
+        isRound 
+        borderColor="white"
+      />
     </LeadCardContent>
   </LeadCardContainer>
 
