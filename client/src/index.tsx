@@ -5,6 +5,8 @@ import {
   createBrowserRouter,
 } from "react-router-dom";
 import { Provider } from 'react-redux';
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
 
 import './index.css';
 
@@ -18,6 +20,22 @@ import MainCategoryPage from './pages/main_category/index';
 import RegistrationPage from './pages/auth/register';
 
 import store from './redux/store';
+
+
+const firebaseConfig = {
+  apiKey: "AIzaSyA8IAJd8-W9Ak50bmaO46p99060ScTP0B4",
+  authDomain: "farm-cart-22b37.firebaseapp.com",
+  projectId: "farm-cart-22b37",
+  storageBucket: "farm-cart-22b37.appspot.com",
+  messagingSenderId: "297034392226",
+  appId: "1:297034392226:web:f0e2db60e90007b2f1adfb",
+  measurementId: "G-654XMPWN7Q"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
 
 const router = createBrowserRouter([
   {

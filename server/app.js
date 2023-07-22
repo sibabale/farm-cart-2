@@ -6,7 +6,7 @@ const productsRouter = require('./routes/products/products.router');
 const app = express();  
 
 app.use(cors({
-  origin: 'http://localhost:3000'
+  origin: ['http://localhost:3000', 'https://farm-cart-22b37.web.app/']
 }));
 app.use(express.json());
 

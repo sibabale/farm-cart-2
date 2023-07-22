@@ -1,0 +1,11 @@
+{
+  "projects": {
+    "default": "farm-cart-22b37"
+  },
+  "targets": {},
+  "etags": {
+    "farm-cart-22b37": {
+      "extensionInstances": {}
+    }
+  }
+}
