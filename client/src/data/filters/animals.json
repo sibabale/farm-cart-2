@@ -2,31 +2,31 @@
 {
   "text": "Cats",
   "link": "animals/cats",
-  "image": "../images/filters/animals/cat.png"
+  "image": "../images/icons/animals/cats.svg"
 },{
   "text": "Cows",
   "link": "animals/cows",
-  "image": "../images/filters/animals/cow.png"
+  "image": "../images/icons/animals/cows.svg"
 },{
   "text": "Chickens",
   "link": "animals/chickens",
-  "image": "../images/filters/animals/chicken.png"
+  "image": "../images/icons/animals/chickens.svg"
 },{
   "text": "Dogs",
   "link": "animals/dogs",
-  "image": "../images/filters/animals/dog.png"
+  "image": "../images/icons/animals/dogs.svg"
 },{
   "text": "Goats",
   "link": "animals/goats",
-  "image": "../images/filters/animals/goat.png"
+  "image": "../images/icons/animals/goats.svg"
 },{
   "text": "Horses",
   "link": "animals/horses",
-  "image": "../images/filters/animals/horse.png"
+  "image": "../images/icons/animals/horses.svg"
 },
 {
   "text": "Sheep",
   "link": "animals/sheep",
-  "image": "../images/filters/animals/sheep.png"
+  "image": "../images/icons/animals/sheep.svg"
 }
 ]
