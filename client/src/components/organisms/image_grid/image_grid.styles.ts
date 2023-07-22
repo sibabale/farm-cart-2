@@ -28,7 +28,7 @@ export const Grid = styled.div`
   'main main three five';
 
   @media screen and (min-width: 1140px) {
-    grid-template-rows: 250px 250px;
+    grid-template-rows: 192px 192px;
     grid-template-columns: 330px 330px 330px 330px;
   }
 
