@@ -1,4 +1,3 @@
-import axios from 'axios';
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from 'react';
 
@@ -16,24 +15,26 @@ import {
 } from './index.styles';
 
 import { selectedProduct} from '../../redux/products/selected/product.selector';
+import { selectAllProducts} from '../../redux/products/all/all.product.selector';
 import { setSelectedProduct} from '../../redux/products/selected/product.slice';
 
 import Avatar from '../../components/atoms/avatar/avatar';
 import { useAppSelector, useAppDispatch } from '../../hooks/redux';
 
 export const DetailsPage = () => {
-  let { id, sub_category, main_category} = useParams();
+  let { id } = useParams();
   
   const dispatch = useAppDispatch();
   const product = useAppSelector(selectedProduct);
+  const products = useAppSelector(selectAllProducts);
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    axios.get(`http://localhost:8000/products/${main_category}/${sub_category}/${id}`).then((response) => {
-      dispatch(setSelectedProduct(response.data))
-      
+    const selectedProduct = products.find((item:any ) => {
+      return item._id === Number(id)
+    })
+    dispatch(setSelectedProduct(selectedProduct))
       setIsLoading(false) 
-    }).catch((error) => console.error(error))
   }, [])
 
   if (isLoading) {
@@ -43,6 +44,9 @@ export const DetailsPage = () => {
       </SubPageLayout>
     )
   };
+
+  console.log(product);
+  
   
   return(
     <SubPageLayout>
@@ -52,25 +56,25 @@ export const DetailsPage = () => {
         <div>
           <ProductIntro 
             name={product.title} 
-            image=""
+            image="https://bit.ly/3pWvDRb"
             price={product.price}
             quantity={product.quantity} 
           />
           <ProductDetails 
             items={[
-              {icon: "../images/icons/cow.svg", text: product.breed, heading: "Breed"},
-              {icon: "../images/weight.png", text: `${product.weight}kg`, heading: "Weight"},
+              {icon: `../../images/icons/animals/${product.sub_category}.svg`, text: product.breed, heading: "Breed"},
+              {icon: "../../images/weight.png", text: `${product.weight}kg`, heading: "Weight"},
             ]}
             description={product.description}
           />
           <SellerDetails>
             <AvatarSection>
               <Avatar
-                image=""
-                heading=''
+                image="https://bit.ly/3pWvDRb"
+                heading='Sold by Lee Ann'
                 subHeading="Joined in 2 February 2023" />
               <VerificationStatus>
-                <img src='../images/shield.png' alt="Shield Icon" />
+                <img src='../../images/shield.png' alt="Shield Icon" />
                 Identity Verified
               </VerificationStatus>
             </AvatarSection>

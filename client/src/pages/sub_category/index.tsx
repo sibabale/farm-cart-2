@@ -1,35 +1,38 @@
-import axios from "axios";
-import { useParams } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useParams} from "react-router-dom";
+import { useEffect,useState} from "react";
 
+import EmptyState from "../../components/atoms/empty_state/empty_state";
 import ProductCard from "../../components/organisms/product_card/product_card";
 import { PageLayout } from "../../components/organisms/layouts/page_layout/page_layout";
 import { ProductLayout } from "../../components/organisms/layouts/product_layout/product_layout";
 
+import { useAppSelector } from '../../hooks/redux';
+import { selectAllProducts} from '../../redux/products/all/all.product.selector';
+
+
+
 const SubCategoryPage = () => {
-  let { sub_category, main_category } = useParams();
+  const {sub_category} = useParams();
   const [data, setData] = useState<any[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
+
+  const products = useAppSelector(selectAllProducts);
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    setIsLoading(true)
-    axios.get(`http://localhost:8000/products/${main_category}/${sub_category?.toLocaleLowerCase()}`)
-    .then((response: any) => {
-      setData(response.data)
+    const selectedCategory = products.filter((item:any ) => {
+      return item.sub_category === sub_category
     })
-    .catch((error: any) => {
-      console.error(error);
-      setIsLoading(false)
-    })
-    .finally(() => setIsLoading(false))
-  }, [main_category, sub_category]);
+    
+    setData(selectedCategory)
+    setIsLoading(false) 
+  }, [])
 
   return (
     <PageLayout>
-      <ProductLayout title={`${sub_category?.charAt(0).toUpperCase()}${sub_category?.slice(1)}`  }>
+      <ProductLayout>
         {data.map((item, index) => (
             <ProductCard
-              id={item._id}
+              id={`${item.main_category}/${item.sub_category}/${item._id}`}
               key={index}
               image={item.images[0]}
               title={item.title}
@@ -40,6 +43,10 @@ const SubCategoryPage = () => {
           ))
         } 
       </ProductLayout>
+      {
+        data.length === 0 && <EmptyState />
+      }
+        
     </PageLayout>
   );
 };

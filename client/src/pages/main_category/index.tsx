@@ -1,31 +1,33 @@
-import axios from "axios";
-import { useEffect,useState} from "react";
 import { useParams} from "react-router-dom";
+import { useEffect,useState} from "react";
 
 import { Filter } from "../../components/organisms/filter/filter";
 import ProductCard from "../../components/organisms/product_card/product_card";
 import { PageLayout } from "../../components/organisms/layouts/page_layout/page_layout";
 import { ProductLayout } from "../../components/organisms/layouts/product_layout/product_layout";
 
+import { useAppSelector } from '../../hooks/redux';
+import { selectAllProducts} from '../../redux/products/all/all.product.selector';
+
 import AnimalFilters  from "../../data/filters/animals.json";
 
 const MainCategoryPage = () => {
   const {main_category} = useParams();
   const [data, setData] = useState<any[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
+
+  
+  const products = useAppSelector(selectAllProducts);
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    setIsLoading(true)
-    axios.get(`http://localhost:8000/products/${main_category}`)
-    .then((response: any) => {
-      setData(response.data)
+    const selectedCategory = products.filter((item:any ) => {
+      return item.main_category === main_category
     })
-    .catch((error: any) => {
-      console.error(error);
-      setIsLoading(false)
-    })
-    .finally(() => setIsLoading(false))
-  }, [main_category]);
+    console.log(selectedCategory);
+    
+    setData(selectedCategory)
+      setIsLoading(false) 
+  }, [])
 
   return (
     <PageLayout>
