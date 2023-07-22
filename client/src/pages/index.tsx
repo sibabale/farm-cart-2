@@ -9,6 +9,7 @@ import { ProductLayout } from "../components/organisms/layouts/product_layout/pr
 import AnimalFilters  from "../data/filters/animals.json";
 import animals from '../data/animals.json';
 import BonsmaraCattle from "../assets/images/goats/goat-6.jpeg";
+import SEO from "../components/molecules/SEO/SEO";
 
 const IndexPage = () => {
 
@@ -19,70 +20,78 @@ const IndexPage = () => {
   const availableGoats = data.filter((item) => item.sub_category === 'goats')  
 
   return (
-    <PageLayout>
-      <Filter items={AnimalFilters} />
-      <LeadCard image={BonsmaraCattle} text="Goats" />
-      {
-        availableCows.length > 0 && (
-          <ProductLayout title="Shop Cows">
-            {availableCows?.map((item, index) => {
-              return (
-                <ProductCard
-                  id={`${item.main_category}/${item.sub_category}/${item._id}`}
-                  key={index}
-                  image={item.images[0]}
-                  title={item.title}
-                  price={item.price}
-                  altText={item.title}
-                  isLoading={false}
-                />
-              )
-            })
-            }        
-          </ProductLayout>
-        )
-      }
-      {
-        availableSheep.length > 0 && (
-          <ProductLayout title="Shop Sheep">
-            {availableSheep?.map((item, index) => {
-              return (
-                <ProductCard
-                  id={`${item.main_category}/${item.sub_category}/${item._id}`}
-                  key={index}
-                  image={item.images[0]}
-                  title={item.title}
-                  price={item.price}
-                  altText={item.title}
-                  isLoading={false}
-                />
-              )
-            })
-            }        
-          </ProductLayout>
-        )
-      }
-      {
-        availableGoats.length > 0 && (
-          <ProductLayout title="Shop Goats">
-            {availableGoats?.map((item, index) => {
-              return (
-                <ProductCard
-                  id={`${item.main_category}/${item.sub_category}/${item._id}`}
-                  key={index}
-                  image={item.images[0]}
-                  title={item.title}
-                  price={item.price}
-                  altText={item.title}
-                  isLoading={false}
-                />
-              )
-            })
-            }        
-          </ProductLayout>
-        )
-      }
-    </PageLayout>
+    <>
+     <SEO 
+        path=""
+        title={`Farm Cart | Buy Livestock Online` } 
+        image=""
+        description="South Africa's first online marketplace for high quality livestock, trusted by the biggest livestock farmers and buyers alike. Buy anything from stud to commercial animals."
+      />
+      <PageLayout>
+        <Filter items={AnimalFilters} />
+        <LeadCard image={BonsmaraCattle} text="Goats" />
+        {
+          availableCows.length > 0 && (
+            <ProductLayout title="Shop Cows">
+              {availableCows?.map((item, index) => {
+                return (
+                  <ProductCard
+                    id={`${item.main_category}/${item.sub_category}/${item._id}`}
+                    key={index}
+                    image={item.images[0]}
+                    title={item.title}
+                    price={item.price}
+                    altText={item.title}
+                    isLoading={false}
+                  />
+                )
+              })
+              }        
+            </ProductLayout>
+          )
+        }
+        {
+          availableSheep.length > 0 && (
+            <ProductLayout title="Shop Sheep">
+              {availableSheep?.map((item, index) => {
+                return (
+                  <ProductCard
+                    id={`${item.main_category}/${item.sub_category}/${item._id}`}
+                    key={index}
+                    image={item.images[0]}
+                    title={item.title}
+                    price={item.price}
+                    altText={item.title}
+                    isLoading={false}
+                  />
+                )
+              })
+              }        
+            </ProductLayout>
+          )
+        }
+        {
+          availableGoats.length > 0 && (
+            <ProductLayout title="Shop Goats">
+              {availableGoats?.map((item, index) => {
+                return (
+                  <ProductCard
+                    id={`${item.main_category}/${item.sub_category}/${item._id}`}
+                    key={index}
+                    image={item.images[0]}
+                    title={item.title}
+                    price={item.price}
+                    altText={item.title}
+                    isLoading={false}
+                  />
+                )
+              })
+              }        
+            </ProductLayout>
+          )
+        }
+      </PageLayout>
+    </>
   );
 };
 
