@@ -33,7 +33,7 @@ export const NavBar = ({}) => {
   }
 
   return (
-    <div className="fixed z-50 w-screen p-3 max-w-full bg-white "
+    <div className="fixed z-50 w-screen p-3 max-w-full bg-white lg:px-10 "
       style={atTopOfPage ? scrollingStyles: {}}
     >
       <div className="flex flex-row justify-between items-center">
