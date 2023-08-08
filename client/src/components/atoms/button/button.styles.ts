@@ -17,9 +17,9 @@ export const ButtonIcon = styled.img<ButtonContainerProps>`
 
 export const ButtonContainer = styled.button<ButtonContainerProps>`
   ${({$size}) => $size === 'lg' ? 'min-width: 300px;' : 'min-width: 150px;'}
+  ${({$size}) => $size === 'sm' ? 'padding: 5px;' : 'padding: 10px;'}
   color: ${({$color}) => $color? $color: 'black'};
   border: 2px solid ${({$borderColor}) => $borderColor ? $borderColor :'black'};
-  padding: 10px;
   display: flex;
   font-size: 16px;
   align-items: center;
