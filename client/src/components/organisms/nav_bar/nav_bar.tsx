@@ -34,7 +34,7 @@ export const NavBar = ({}) => {
   }
 
   return (
-    <div className="fixed z-50 w-screen p-3 max-w-full bg-white lg:px-10 "
+    <div className="fixed z-50 w-screen p-4 max-w-full bg-white sm:px-10 "
       style={atTopOfPage ? scrollingStyles: {}}
     >
       <div className="flex flex-col">

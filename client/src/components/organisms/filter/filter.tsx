@@ -1,8 +1,6 @@
 import Link from "../../atoms/link/link";
 
 import {
-  FilterItem,
-  FilterItems,
   FilterImage
 } from "./filter.styles";
 
@@ -18,17 +16,17 @@ type ItemProps   = {
 export const Filter = ({ items }: ItemProps) => {
 
   return (
-    <FilterItems>
+    <div className="hidden mt-10 md:flex items-center justify-center">
       {
         items.map((item, index) => (
-        <FilterItem key={index} >
+        <div key={index} className="mx-5">
           <Link to={item.link}>
-              <FilterImage src={item.image}  alt={item.text} />
-            <span>{item.text}</span>
+              <FilterImage src={item.image}  alt={item.text} className="my-0 mx-auto" />
+            <span className="text-center">{item.text}</span>
           </Link>
-        </FilterItem>
+        </div>
         ))
       }
-    </FilterItems>
+    </div>
   );
 };

@@ -3,10 +3,7 @@ import {
   WhatsappLink,
 } from './empty_state.styles';
 
-
-
 export default function EmptyState ({showLink = true, heading, subHeading}: {showLink?: boolean, heading?: string, subHeading?: string}) {
-
 
   return (
     <div className="h-fit w-fit my-0 mx-auto p-5 md:p-20 rounded border-2 border-dashed" >
