@@ -22,7 +22,7 @@ export const Price = styled.span`
 
 export const BankingDetails = styled.div`
   padding: 10px;
-  margin-top: 20px;
+  margin-bottom: 20px;
   border-radius: 10px;
   background-color: #d9d9d9;
 `;

@@ -1,5 +1,28 @@
 [
   {
+    "_id": 1234423432333,
+    "age": "11 to 14 months",
+    "stud": false,
+    "owner": {
+      "farm": {
+        "name": "Aucamp Boer Goat Stud",
+        "logo": "../../images/sellers/aucamp/logo.jpeg",
+        "joined": "07 August 2023"
+      }
+    },
+    "breed": "Boer Goat",
+    "price": 4800,
+    "title": "Boer Goat Ewes",
+    "video": "https://firebasestorage.googleapis.com/v0/b/farm-cart-22b37.appspot.com/o/videos%2F8-boer-gaot-ewes.mp4?alt=media&token=61d5a0fe-bd46-457f-8e2f-d8f0c7612380",
+    "weight": null,
+    "sold_at": null,
+    "quantity": 8,
+    "created_at": "20 Jan 2023",
+    "main_category": "animals",
+    "sub_category": "goats",
+    "description": "Aucamp Boer Goat Stud is offering 8 beautiful flock boer goat ewes. These ewes are great for farmers looking into starting a boer goat operation or an established farmer looking for replacement ewes."
+  },
+  {
     "_id": 1234423432,
     "owner": "23233232323232333",
     "breed": "Boran",

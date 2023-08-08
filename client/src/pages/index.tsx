@@ -26,11 +26,13 @@ const IndexPage = () => {
         availableCows.length > 0 && (
           <ProductLayout title="Shop Cows">
             {availableCows?.map((item, index) => {
+              const {images} = item;
               return (
                 <ProductCard
                   id={`${item.main_category}/${item.sub_category}/${item._id}`}
                   key={index}
-                  image={item.images[0]}
+                  image={images ? images[0] : ''}
+                  video={item.video}
                   title={item.title}
                   price={item.price}
                   altText={item.title}
@@ -46,11 +48,13 @@ const IndexPage = () => {
         availableSheep.length > 0 && (
           <ProductLayout title="Shop Sheep">
             {availableSheep?.map((item, index) => {
+              const {images} = item;
               return (
                 <ProductCard
                   id={`${item.main_category}/${item.sub_category}/${item._id}`}
                   key={index}
-                  image={item.images[0]}
+                  image={images ? images[0] : ''}
+                  video={item.video}
                   title={item.title}
                   price={item.price}
                   altText={item.title}
@@ -66,14 +70,16 @@ const IndexPage = () => {
         availableGoats.length > 0 && (
           <ProductLayout title="Shop Goats">
             {availableGoats?.map((item, index) => {
+              const {_id, price, title, images, video,  sub_category, main_category,} = item;
               return (
                 <ProductCard
-                  id={`${item.main_category}/${item.sub_category}/${item._id}`}
+                  id={`${main_category}/${sub_category}/${_id}`}
                   key={index}
-                  image={item.images[0]}
-                  title={item.title}
-                  price={item.price}
-                  altText={item.title}
+                  image={images ? images[0] : ''}
+                  video={video}
+                  title={title}
+                  price={price}
+                  altText={title}
                   isLoading={false}
                 />
               )

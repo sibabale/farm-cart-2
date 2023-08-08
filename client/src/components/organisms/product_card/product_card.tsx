@@ -1,17 +1,18 @@
 import ContentLoader from 'react-content-loader'
 
-import { CardImage, ProductCardContainer } from "./product_card.styles";
+import { Video, CardImage, ProductCardContainer } from "./product_card.styles";
 
 type ProductCardLayoutProps = {
   id: string | number,
-  image: string, 
+  image?: string | undefined | null, 
   price: number, 
   title: string, 
+  video?: string,
   altText: string, 
   isLoading: boolean
 };
 
-const ProductCard = ({ id, image, price, title, altText, isLoading   }: ProductCardLayoutProps) => {
+const ProductCard = ({ id, image, video, price, title, altText, isLoading   }: ProductCardLayoutProps) => {
 if (isLoading) {
   return (
     <ContentLoader
@@ -28,7 +29,16 @@ if (isLoading) {
 
   return (
     <ProductCardContainer to={`/${id}`}>
-    <CardImage src={image} alt={altText} />
+      {
+        image ? (
+          <CardImage src={image} alt={altText} />  
+        )
+        : video ? (
+          <Video autoPlay={true} className="wp-video-shortcode" id="video-2-1" width="1000" height="563" preload="metadata" >
+            <source type="video/mp4" src={video} />
+          </Video>
+        ) : ''
+      }
       <h5>{title}</h5>
       <b>R {price}</b>
     </ProductCardContainer>

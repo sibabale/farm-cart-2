@@ -3,13 +3,11 @@ import { useState, useEffect } from "react";
 import { 
   Menu, 
   NavTitle,
+  NavLinks, 
   NavBarItems,
-  ProfileCart, 
   NavBarContainer 
 } from "./nav_bar.styles";
-import Avatar from "../../atoms/avatar/avatar";
 import MenuImage from "../../../assets/icons/menu.svg";
-import { Button } from "../../atoms/button/button";
 
 
 export const NavBar = ({}) => {
@@ -39,6 +37,11 @@ export const NavBar = ({}) => {
         <NavTitle>
           <Link to="/">farm cart</Link>
         </NavTitle>
+        <NavLinks>
+          <Link to="/animals">Animals</Link>
+          <Link to="/why">Why?</Link>
+          <Link to="#" className="blog">Blog <span>coming soon</span></Link>
+        </NavLinks>
         <Menu src={MenuImage} alt="Menu" />
       </NavBarItems>
     </NavBarContainer>

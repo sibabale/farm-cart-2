@@ -7,11 +7,12 @@ type LinkProps = {
   color?: string,
   onClick?: () => void,
   children: ReactNode;
+  className?: string,
 }
 
-export const Link = ({to, color, children}: LinkProps) => {
+export const Link = ({to, color, className, children}: LinkProps) => {
   return(
-    <Anchor href={to} color={color}>
+    <Anchor href={to} color={color} className={className}>
       {children}
     </Anchor>
   )

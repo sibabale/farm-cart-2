@@ -26,19 +26,20 @@ export default function ProductCTA ({price}: IProductCTAProps) {
       {
         isCheckingOut && (
           <>
+            
+            <BankingDetails>
+              <p><b>Bank:</b> Capitec Bank</p>
+              <p><b>Branch Code:</b> 470010</p>
+              <p><b>Account Number:</b> 1512 9916 25</p>
+              <p><b>Reference Number:</b> Your 10 digit cell number <small>(eg. 081 000 0000)</small></p>
+            </BankingDetails>
             <small>
               <b>
-                <u>NB:</u> Make your payment to the following account and keep your
-                  Reference Number safe.
-                  Once you funds reflect the seller will contact you to make arrangements.
+                <u>NB:</u> Make your payment to the above account and keep your
+                  proof of payment safe.
+                  Once you funds reflect we will contact you to make arrangements.
               </b>
             </small>
-            <BankingDetails>
-              <p><b>Bank:</b> Absa</p>
-              <p><b>Branch Code:</b> 0000</p>
-              <p><b>Account Number:</b> 0000 000 000 000</p>
-              <p><b>Reference Number:</b> 00000 0000 0000</p>
-            </BankingDetails>
           </>
         )
       }

@@ -50,12 +50,28 @@ export const NavBarContainer = styled.nav<{$atTopOfPage: boolean}>`
       : ""};
 `;
 
+export const NavLinks = styled.div`
+  display: flex;
+  justify-content: space-around;
+
+  .blog {
+     span {
+      color: white;
+      background-color:gray;
+      border-radius: 10px;
+      padding: 0 5px;
+    }
+  }
+`
+
+
 export const NavBarItems = styled.div`
   margin: 0 40px;
   padding: 10px 0;
-  display: flex;
+  display: grid;
   align-items: center;
-  justify-content: space-between;
+  grid-template-columns: auto auto auto;
+  /* align-items: center; */
 
   @media screen and (max-width: 425px) {
     height: 60px;

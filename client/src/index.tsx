@@ -9,18 +9,27 @@ import { Provider } from 'react-redux';
 import './index.css';
 
 import Home from './pages/index';
+import WhyPage from './pages/why';
 import DetailsPage from './pages/details';
 import reportWebVitals from './reportWebVitals';
 import SubCategoryPage from './pages/sub_category/index';
 
 import store from './redux/store';
+import AnimalsPage from './pages/animals';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
   },
-
+  {
+    path: "/why",
+    element: <WhyPage />,
+  },
+  {
+    path: "/animals",
+    element: <AnimalsPage />,
+  },
   {
     path: "/:main_category/:sub_category/:id",
     element: <DetailsPage />,

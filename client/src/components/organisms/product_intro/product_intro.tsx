@@ -11,8 +11,8 @@ import {
 
 export interface IProductIntroProps {
   name: string,
-  image: string,
   price: number
+  image?: string,
   quantity: number
 }
 
@@ -25,9 +25,10 @@ export default function ProductIntro ({name, image, price, quantity}: IProductIn
           <Badge>
             <Lot>Quantity: {quantity}</Lot>
           </Badge>
-          <Price>R{price}</Price>
+          <Price>Each: R{price}</Price>
+          <Price>Lot: R{price * 8}</Price>
         </div>
-        <Avatar image={image} />
+        {image && <Avatar image={image} />}
       </ProductIntroContent>
       <BottomLine />
     </ProductIntroContainer>

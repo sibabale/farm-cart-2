@@ -45,34 +45,46 @@ export const DetailsPage = () => {
     )
   };
 
-  console.log(product);
-  
-  
   return(
     <SubPageLayout>
-      <ImageGrid images={product.images} />  
+      {
+        product.images ? (
+          <ImageGrid images={product.images} />  
+        ): product.video ? (
+          <video 
+            autoPlay={true} 
+            width="1000"
+            height="563"
+            preload="metadata" 
+            controls={true} 
+            style={{margin: '0 auto', display: 'flex'}}
+          >
+            <source type="video/mp4" src={product.video} />
+          </video>
+        ) : ""
+      }
       <ProductInformationContainer>
       <ProductInformation>
         <div>
           <ProductIntro 
             name={product.title} 
-            image="https://bit.ly/3pWvDRb"
             price={product.price}
             quantity={product.quantity} 
           />
           <ProductDetails 
-            items={[
-              {icon: `../../images/icons/animals/${product.sub_category}.svg`, text: product.breed, heading: "Breed"},
-              {icon: "../../images/weight.png", text: `${product.weight}kg`, heading: "Weight"},
-            ]}
+            age={product.age}
+            stud={product.stud}
+            breed={product.breed}
+            weight={product.weight}
+            sub_category={product.sub_category}
             description={product.description}
           />
           <SellerDetails>
             <AvatarSection>
               <Avatar
-                image="https://bit.ly/3pWvDRb"
-                heading='Sold by Lee Ann'
-                subHeading="Joined in 2 February 2023" />
+                image={product.owner.farm.logo}
+                heading={product.owner.farm.name}
+                subHeading={`Joined in ${product.owner.farm.joined}`} />
               <VerificationStatus>
                 <img src='../../images/shield.png' alt="Shield Icon" />
                 Identity Verified
