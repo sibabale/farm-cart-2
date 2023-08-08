@@ -10,6 +10,7 @@ import MenuImage from "../../../assets/icons/menu.svg";
 export const NavBar = ({}) => {
   // const [clickedItem, setClickedItem] = useState("");
   const [atTopOfPage, setAtTopOfPage] = useState(false);
+  const [mobileMenuVisibility, toggleMobileMenuVisibility] = useState(false);
   // const [clickAnimation, setClickAnimation] = useState(false);
 
   const handleScroll = () => {
@@ -36,27 +37,51 @@ export const NavBar = ({}) => {
     <div className="fixed z-50 w-screen p-3 max-w-full bg-white lg:px-10 "
       style={atTopOfPage ? scrollingStyles: {}}
     >
-      <div className="flex flex-row justify-between items-center">
-        <NavTitle>
-          <Link to="/">farm cart</Link>
-        </NavTitle>
-        <div className="hidden md:flex justify-between">
-          <Link to="/animals" className="px-4 lg:px-10">Animals</Link>
-          <Link to="/why" className="px-4 lg:px-10">Why?</Link>
-          <Link to="/blog" className="pl-4 lg:pl-10">Blog</Link>
+      <div className="flex flex-col">
+        <div className="flex flex-row justify-between items-center">
+          <NavTitle>
+            <Link to="/">farm cart</Link>
+          </NavTitle>
+          <div className="hidden md:flex justify-between">
+            <Link to="/animals" className="px-4 lg:px-10">Animals</Link>
+            <Link to="/why" className="px-4 lg:px-10">Why?</Link>
+            <Link to="/blog" className="pl-4 lg:pl-10">Blog</Link>
+          </div>
+          <div className="hidden md:block">
+            <Button 
+            as="link"
+            to="/sell"
+            bg="black" 
+            text="Sell Animals" 
+            size="sm" 
+            color="white" 
+            isRound
+          />
+          </div>
+          <img 
+            src={MenuImage} 
+            alt="Burger Menu" 
+            className="md:hidden w-10"
+            onClick={() => toggleMobileMenuVisibility(!mobileMenuVisibility) }
+          />
         </div>
-        <div className="hidden md:block">
-          <Button 
-          as="link"
-          to="/sell"
-          bg="black" 
-          text="Sell Animals" 
-          size="sm" 
-          color="white" 
-          isRound
-        />
-        </div>
-        <img src={MenuImage} alt="Menu" className="md:hidden w-10"/>
+        {
+          mobileMenuVisibility && (
+            <div className="bg-white">
+              <ul className="flex flex-col items-center">
+                <li className="p-3">
+                  <Link to="/animals">Animals</Link>
+                </li>
+                <li className="p-3">
+                  <Link to="/why">Why?</Link>
+                </li>
+                <li className="p-3">
+                  <Link to="/blog">Blog</Link>
+                </li>
+              </ul>
+            </div>
+          )
+        }
       </div>
     </div>
   );
