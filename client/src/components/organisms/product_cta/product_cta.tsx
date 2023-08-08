@@ -14,7 +14,14 @@ export default function ProductCTA ({price}: IProductCTAProps) {
 
   const [isCheckingOut, setIsCheckingOut] = useState(false)
   return (
-    <ProductCTAContainer>
+    // height: fit-content;
+    // border: 2px solid lightgray;
+    // border-radius: 10px;
+    // flex-direction: column;
+    // justify-content: space-around;
+    <div 
+      className="hidden p-4 h-fit sm:flex flex-col rounded border-2 border-gray justify-around"
+    >
       <Price>R {price}</Price>
       <Button 
         bg="black"
@@ -27,7 +34,7 @@ export default function ProductCTA ({price}: IProductCTAProps) {
         isCheckingOut && (
           <>
             
-            <BankingDetails>
+            <BankingDetails className="mt-4">
               <p><b>Bank:</b> Capitec Bank</p>
               <p><b>Branch Code:</b> 470010</p>
               <p><b>Account Number:</b> 1512 9916 25</p>
@@ -43,6 +50,6 @@ export default function ProductCTA ({price}: IProductCTAProps) {
           </>
         )
       }
-    </ProductCTAContainer>
+    </div>
   );
 }

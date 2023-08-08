@@ -6,9 +6,12 @@ import {LeadCardText,LeadCardContainer, LeadCardContent } from "./lead_card.styl
 type LeadCardProps = {
   text: string
   image: string
-}
+};
+
 export const LeadCard = ({ image, text }: LeadCardProps ) => (
-  <LeadCardContainer $image={image} >
+  <LeadCardContainer 
+  
+  $image={image} >
     <LeadCardContent>
       <LeadCardText>{text}</LeadCardText>
       <Button 
@@ -22,7 +25,6 @@ export const LeadCard = ({ image, text }: LeadCardProps ) => (
       />
     </LeadCardContent>
   </LeadCardContainer>
-
-)
+);
 
 export default LeadCard;

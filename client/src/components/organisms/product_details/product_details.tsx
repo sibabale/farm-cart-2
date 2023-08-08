@@ -3,8 +3,6 @@ import {
   Content,
   Heading,
   BottomLine, 
-  ProductDetailsContent,
-  ProductDetailsContainer
   } from './product_details.styles';
 
 export interface IProductDetailsProps {
@@ -19,8 +17,8 @@ export interface IProductDetailsProps {
 export default function ProductDetails ({age, stud, breed, weight,sub_category, description }: IProductDetailsProps) {
 
   return (
-    <ProductDetailsContainer>
-      <ProductDetailsContent>          
+    <div className='flex pt-4'>
+      <div>          
           {stud && (
             <Item>
               <img src="../../images/icons/app/badge.png" alt="Age Icon" />
@@ -58,10 +56,11 @@ export default function ProductDetails ({age, stud, breed, weight,sub_category, 
             )
           }
         <BottomLine />
-        <Heading>Description</Heading>
-        <p>{description}</p>
+        <Heading className="pt-4">Description</Heading>
+        <p className="pb-4">{description}</p>
+          
         <BottomLine />
-      </ProductDetailsContent>
-    </ProductDetailsContainer>
+      </div>
+    </div>
   );
 }

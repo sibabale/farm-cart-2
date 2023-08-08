@@ -15,6 +15,7 @@ export const Button = ({
   iconAlt, 
   onClick,
   children, 
+  className,
   borderColor, 
   iconPosition 
 }: ButtonProps) => {
@@ -27,6 +28,7 @@ export const Button = ({
       $color={color}
       onClick={onClick}
       $isRound={isRound}
+      className={className}
       $borderColor={borderColor}
     >
       {

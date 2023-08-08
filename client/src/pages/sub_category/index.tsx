@@ -44,7 +44,12 @@ const SubCategoryPage = () => {
         } 
       </ProductLayout>
       {
-        data.length === 0 && <EmptyState />
+        data.length === 0 && (
+          <EmptyState 
+            heading="Sorry we don’t have this product at the moment"
+            subHeading="If you have it available for sale, contact us below."
+          />
+        )
       }
         
     </PageLayout>

@@ -10,7 +10,6 @@ export const LeadCardContainer = styled.div<{$image: string}>`
   display: flex;
   margin-top: 20px;
   align-items: center;
-  border-radius: 10px;
   justify-content: center;
   background-size: cover;
   background-image: ${({$image}) => $image &&  `url(${$image})` };

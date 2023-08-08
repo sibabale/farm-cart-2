@@ -14,13 +14,11 @@ export const ProductInformation = styled.div`
 
 
 export const VerificationStatus   = styled.div`
-  display: flex;
-  align-items: center;
 
   img{ 
     width: 30px;
     height: 30px;
-    margin-right: 20px;
+    margin-right: 35px;
   }
 `;
 
@@ -30,7 +28,6 @@ export const SellerDetails   = styled.div`
 `;
 
 export const AvatarSection   = styled.div`
-  width: 650px;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;

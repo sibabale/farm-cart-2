@@ -13,6 +13,7 @@ export type ButtonProps = {
   isRound?: boolean, 
   iconAlt?: string,
   children?: ReactNode,
+  className?: string, 
   borderColor?: string
   iconPosition?: string
 }

@@ -26,12 +26,12 @@ const IndexPage = () => {
         availableCows.length > 0 && (
           <ProductLayout title="Shop Cows">
             {availableCows?.map((item, index) => {
-              const {images} = item;
+              // const {images} = item;
               return (
                 <ProductCard
                   id={`${item.main_category}/${item.sub_category}/${item._id}`}
                   key={index}
-                  image={images ? images[0] : ''}
+                  // image={images ? images[0] : ''}
                   video={item.video}
                   title={item.title}
                   price={item.price}
@@ -48,12 +48,12 @@ const IndexPage = () => {
         availableSheep.length > 0 && (
           <ProductLayout title="Shop Sheep">
             {availableSheep?.map((item, index) => {
-              const {images} = item;
+              // const {images} = item;
               return (
                 <ProductCard
                   id={`${item.main_category}/${item.sub_category}/${item._id}`}
                   key={index}
-                  image={images ? images[0] : ''}
+                  // image={images ? images[0] : ''}
                   video={item.video}
                   title={item.title}
                   price={item.price}
@@ -70,12 +70,12 @@ const IndexPage = () => {
         availableGoats.length > 0 && (
           <ProductLayout title="Shop Goats">
             {availableGoats?.map((item, index) => {
-              const {_id, price, title, images, video,  sub_category, main_category,} = item;
+              const {_id, price, title, video,  sub_category, main_category} = item;
               return (
                 <ProductCard
                   id={`${main_category}/${sub_category}/${_id}`}
                   key={index}
-                  image={images ? images[0] : ''}
+                  // image={images ? images[0] : ''}
                   video={video}
                   title={title}
                   price={price}

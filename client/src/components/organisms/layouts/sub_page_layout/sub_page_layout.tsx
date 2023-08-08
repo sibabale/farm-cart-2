@@ -12,9 +12,7 @@ export const SubPageLayout = ({ children }: PageLayoutProps) => {
     <>
       <NavBar />
         <SubPageLayoutContainer>
-          <div>
-            {children}
-          </div>
+          {children}
         </SubPageLayoutContainer>
     </>
   );

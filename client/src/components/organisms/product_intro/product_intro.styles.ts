@@ -9,13 +9,8 @@ margin: 0;
 `;
 
 export const ProductIntroContent = styled.div`
-  width: 650px;
   display: flex;
   justify-content: space-between;
-  
-  @media screen and (max-width: 1024px){
-    width: 950px;
-  }
 `
 
 export const ProductIntroContainer = styled.div`

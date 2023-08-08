@@ -14,13 +14,13 @@ const AnimalsPage = () => {
         data.length > 0 && (
           <ProductLayout title="Animals">
             {data?.map((item, index) => {
-              const {images} = item;
+              // const {images} = item;
                             
               return (
                 <ProductCard
                   id={`${item.main_category}/${item.sub_category}/${item._id}`}
                   key={index}
-                  image={images ? images[0] : ''}
+                  // image={images ? images[0] : ''}
                   video={item.video}
                   title={item.title}
                   price={item.price}

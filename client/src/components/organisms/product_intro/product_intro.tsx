@@ -18,8 +18,8 @@ export interface IProductIntroProps {
 
 export default function ProductIntro ({name, image, price, quantity}: IProductIntroProps) {
   return (
-    <ProductIntroContainer>
-      <ProductIntroContent>
+    <div className="flex flex-col">
+      <div className="flex justify-items-between">
         <div> 
           <ProductName>{name}</ProductName>
           <Badge>
@@ -29,8 +29,8 @@ export default function ProductIntro ({name, image, price, quantity}: IProductIn
           <Price>Lot: R{price * 8}</Price>
         </div>
         {image && <Avatar image={image} />}
-      </ProductIntroContent>
+      </div>
       <BottomLine />
-    </ProductIntroContainer>
+    </div>
   );
 }

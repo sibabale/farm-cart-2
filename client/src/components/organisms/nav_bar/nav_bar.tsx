@@ -1,4 +1,5 @@
 import { Link } from "../../atoms/link/link";
+import { Button } from "../../atoms/button/button"
 import { useState, useEffect } from "react";
 import { 
   NavTitle,
@@ -32,7 +33,7 @@ export const NavBar = ({}) => {
   }
 
   return (
-    <div className="fixed z-50 w-screen px-3 max-w-full bg-white "
+    <div className="fixed z-50 w-screen p-3 max-w-full bg-white "
       style={atTopOfPage ? scrollingStyles: {}}
     >
       <div className="flex flex-row justify-between items-center">
@@ -42,10 +43,18 @@ export const NavBar = ({}) => {
         <div className="hidden md:flex justify-between">
           <Link to="/animals" className="px-4 lg:px-10">Animals</Link>
           <Link to="/why" className="px-4 lg:px-10">Why?</Link>
-          <Link to="#" className="pl-4 lg:pl-10">Blog</Link>
+          <Link to="/blog" className="pl-4 lg:pl-10">Blog</Link>
         </div>
-        <div>
-          <button className="hidden md:block">List Livestock</button>
+        <div className="hidden md:block">
+          <Button 
+          as="link"
+          to="/sell"
+          bg="black" 
+          text="Sell Animals" 
+          size="sm" 
+          color="white" 
+          isRound
+        />
         </div>
         <img src={MenuImage} alt="Menu" className="md:hidden w-10"/>
       </div>

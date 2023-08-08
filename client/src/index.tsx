@@ -10,6 +10,8 @@ import './index.css';
 
 import Home from './pages/index';
 import WhyPage from './pages/why';
+import SellPage from './pages/sell';
+import BlogPage from './pages/blog';
 import DetailsPage from './pages/details';
 import reportWebVitals from './reportWebVitals';
 import SubCategoryPage from './pages/sub_category/index';
@@ -25,6 +27,14 @@ const router = createBrowserRouter([
   {
     path: "/why",
     element: <WhyPage />,
+  },
+  {
+    path: "/sell",
+    element: <SellPage />,
+  },
+  {
+    path: "/blog",
+    element: <BlogPage />,
   },
   {
     path: "/animals",

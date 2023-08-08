@@ -57,44 +57,49 @@ export const DetailsPage = () => {
             height="563"
             preload="metadata" 
             controls={true} 
+            className="w-screen"
             style={{margin: '0 auto', display: 'flex'}}
           >
             <source type="video/mp4" src={product.video} />
           </video>
         ) : ""
       }
-      <ProductInformationContainer>
-      <ProductInformation>
-        <div>
-          <ProductIntro 
-            name={product.title} 
-            price={product.price}
-            quantity={product.quantity} 
-          />
-          <ProductDetails 
-            age={product.age}
-            stud={product.stud}
-            breed={product.breed}
-            weight={product.weight}
-            sub_category={product.sub_category}
-            description={product.description}
-          />
-          <SellerDetails>
-            <AvatarSection>
-              <Avatar
-                image={product.owner.farm.logo}
-                heading={product.owner.farm.name}
-                subHeading={`Joined in ${product.owner.farm.joined}`} />
-              <VerificationStatus>
-                <img src='../../images/shield.png' alt="Shield Icon" />
-                Identity Verified
-              </VerificationStatus>
-            </AvatarSection>
-          </SellerDetails>
+      <div className="w-screen p-3 md:px-6 lg:p-12">
+        <div className="flex flex-col md:flex-row">
+          <div className="md:w-3/5">
+            <ProductIntro 
+              name={product.title} 
+              price={product.price}
+              quantity={product.quantity} 
+            />
+            <ProductDetails 
+              age={product.age}
+              stud={product.stud}
+              breed={product.breed}
+              weight={product.weight}
+              sub_category={product.sub_category}
+              description={product.description}
+            />
+            <div className="p-4">
+              <div className="flex flex-col lg:flex-row md:justify-between">
+                <Avatar
+                  image={product.owner.farm.logo}
+                  heading={product.owner.farm.name}
+                  subHeading={`Joined in ${product.owner.farm.joined}`}
+                />
+                
+                <VerificationStatus className="pt-4 flex align-center">
+                  <img src='../../images/shield.png' alt="Shield Icon" />
+                  Identity Verified
+                </VerificationStatus>
+              </div>
+            </div>
+          </div>
+          <div className="md:ml-4 md:w-2/5 lg:ml-8">
+            <ProductCTA price={product.price} />
+          </div>
         </div>
-        <ProductCTA price={product.price} />
-      </ProductInformation>
-      </ProductInformationContainer>
+      </div>
       
     </SubPageLayout>
   )

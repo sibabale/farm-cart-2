@@ -6,17 +6,21 @@ import {
 
 
 
-export default function EmptyState () {
+export default function EmptyState ({showLink = true, heading, subHeading}: {showLink?: boolean, heading?: string, subHeading?: string}) {
 
 
   return (
     <EmptyStateContainer >
-      <h2>Sorry we don’t have this product at the moment</h2>
-      <h3>If you have it available for sale, contact us below</h3>
-      <WhatsappLink href="https://wa.me/27813170529?text=Hi I would like to sell">
-        
-        <img src="../../images/icons/social/whatsapp.svg" alt="Whatsapp icon" />
-        081 317 0529</WhatsappLink>
+      <h2>{heading}</h2>
+      <h3>{subHeading}</h3>
+      
+      {showLink && (
+          <WhatsappLink href="https://wa.me/27813170529?text=Hi I would like to sell">
+            <img src="../../images/icons/social/whatsapp.svg" alt="Whatsapp icon" />
+            081 317 0529
+          </WhatsappLink> 
+        )
+      }
     </EmptyStateContainer>
   );
 }

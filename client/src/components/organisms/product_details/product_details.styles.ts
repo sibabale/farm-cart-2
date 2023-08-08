@@ -7,13 +7,7 @@ export const ProductDetailsContainer = styled.div`
   flex-direction: column;
 `;
 
-export const ProductDetailsContent = styled.div`
-  width: 650px;
 
-  @media screen and (max-width: 1024px){
-    width: 950px;
-  }
-`
 
 export const Heading = styled.h3`
   font-size: 16px;
