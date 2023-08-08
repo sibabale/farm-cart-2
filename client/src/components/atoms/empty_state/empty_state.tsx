@@ -1,7 +1,6 @@
 
 import {
   WhatsappLink,
-  EmptyStateContainer
 } from './empty_state.styles';
 
 
@@ -10,9 +9,9 @@ export default function EmptyState ({showLink = true, heading, subHeading}: {sho
 
 
   return (
-    <EmptyStateContainer >
-      <h2>{heading}</h2>
-      <h3>{subHeading}</h3>
+    <div className="h-fit w-fit my-0 mx-auto p-5 md:p-20 rounded border-2 border-dashed" >
+      <h2 className="text-center text-xl text-gray-500">{heading}</h2>
+      <h3 className='text-center text-gray-500'>{subHeading}</h3>
       
       {showLink && (
           <WhatsappLink href="https://wa.me/27813170529?text=Hi I would like to sell">
@@ -21,6 +20,6 @@ export default function EmptyState ({showLink = true, heading, subHeading}: {sho
           </WhatsappLink> 
         )
       }
-    </EmptyStateContainer>
+    </div>
   );
 }

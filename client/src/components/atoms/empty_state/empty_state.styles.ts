@@ -13,17 +13,3 @@ export const WhatsappLink = styled.a`
   }
   
 `;
-
-export const EmptyStateContainer = styled.div`
-  width: 1000px;
-  margin: 0 auto;
-  border: 2px dashed #9D9797;
-  height: 300px;
-  padding: 50px;
-  border-radius: 10px;
-
-  h2, h3 {
-    color: #9D9797;
-    text-align: center;
-  }
-`;
