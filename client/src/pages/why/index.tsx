@@ -1,11 +1,10 @@
 import { PageLayout } from "../../components/organisms/layouts/page_layout/page_layout";
 
-import {Card, Heading} from './index.styles';
 const WhyPage = () => {
 
   return (
     <PageLayout >
-      <Heading>why?</Heading>
+      <h1 className="my-5 sm:mb-10 md:mt-20 text-2xl sm:text-4xl	text-center ">why?</h1>
       <div className="sm:px-10 md:px-0 flex flex-col items-center md:flex-row md:items-start md:justify-between">
         <div className="w-80 mb-10 md:mb-0 md:pr-5">
           <img 
